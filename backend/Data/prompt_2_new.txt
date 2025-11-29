@@ -1,0 +1,931 @@
+# Task: Create Comprehensive City Database with Tourism Tags
+
+## Objective
+Create a structured database of tourist destination cities with tags that enable smart filtering of tourism categories. These city tags will be matched against category requirement tags to show only relevant options to users.
+
+---
+
+## ⚠️ CRITICAL: TAG VOCABULARY REFERENCE
+
+**You MUST use EXACTLY these tag values. Do not invent new values, synonyms, or variations.**
+
+This vocabulary comes from the category database. Using different values will break the filtering algorithm.
+
+### geo_type (use ONLY these values):
+```
+urban
+rural
+coastal
+desert
+mountain
+forest
+island
+tropical
+lakeside
+riverside
+volcanic
+plains
+limestone
+arctic
+```
+
+### geo_region (use ONLY these values):
+```
+all
+all_coastal
+east_asia
+southeast_asia
+south_asia
+western_europe
+eastern_europe
+northern_europe
+southern_europe
+middle_east
+north_africa
+sub_saharan_africa
+north_america
+central_america
+south_america
+caribbean
+oceania
+pacific_islands
+central_asia
+```
+Note: For cities, use specific region (not "all" or "all_coastal").
+
+### infrastructure (use ONLY these values):
+```
+developed
+developing
+remote
+adventure_infrastructure
+```
+
+### climate_type (use ONLY these values):
+```
+tropical
+subtropical
+mediterranean
+continental
+oceanic
+desert
+semi_arid
+subarctic
+arctic
+highland
+monsoon
+```
+
+### weather_characteristics (use ONLY these values):
+```
+sunny_most_year
+rainy_season
+snowy_winters
+mild_year_round
+extreme_heat_summer
+extreme_cold_winter
+humid
+dry
+windy
+unpredictable
+```
+
+### seasonal_features (use ONLY these values):
+These correspond to season_special from categories — what can tourists experience in this city:
+```
+cherry_blossom
+autumn_foliage
+christmas_period
+easter
+ramadan
+ski_season
+summer_holidays
+halloween
+lunar_new_year
+monsoon_avoid
+northern_lights
+winter_festivals
+tulip_season
+spring_festivals
+beach_season
+midnight_sun
+summer_festivals
+outdoor_concerts
+harvest_festivals
+wine_harvest
+oktoberfest
+ice_hotels
+snowy_landscapes
+```
+
+### tourism_characteristics (use ONLY these values):
+What the city is known for as a destination:
+```
+beach_destination
+ski_resort
+cultural_hub
+historical_city
+party_destination
+foodie_destination
+shopping_destination
+adventure_base
+wellness_destination
+business_hub
+romantic_destination
+family_destination
+backpacker_friendly
+luxury_destination
+spiritual_center
+art_capital
+music_city
+tech_hub
+university_town
+```
+
+### special_features (use ONLY these values):
+Special attractions or legal/infrastructure features:
+```
+unesco_sites
+theme_parks
+casinos
+cannabis_legal
+lgbtq_friendly
+nightlife_hub
+wine_region
+dive_sites
+surf_spots
+safari_access
+ancient_ruins
+royal_heritage
+religious_significance
+film_location
+cruise_port
+hot_springs
+```
+
+---
+
+## TAG SYSTEM EXPLANATION
+
+Each city needs tags across ALL these dimensions for proper filtering against category requirements.
+
+### A) GEOGRAPHY TAGS
+
+#### geo_type (what kind of place is it physically)
+Select ALL that apply to the city:
+- `urban` — major city, metropolitan area
+- `coastal` — on the sea/ocean
+- `riverside` — major river runs through
+- `lakeside` — on a significant lake
+- `island` — on an island
+- `mountain` — in mountains or at high altitude
+- `desert` — in or near desert
+- `tropical` — tropical environment
+- `arctic` — arctic/subarctic region
+- `forest` — surrounded by forests
+- `plains` — flat terrain, steppes, prairies
+- `volcanic` — near active/dormant volcanoes
+- `rural` — countryside, not major urban center
+- `limestone` — karst/limestone landscape
+
+#### geo_region (which part of the world)
+Select ONE primary region:
+- `western_europe`
+- `eastern_europe`
+- `northern_europe`
+- `southern_europe`
+- `east_asia`
+- `southeast_asia`
+- `south_asia`
+- `central_asia`
+- `middle_east`
+- `north_africa`
+- `sub_saharan_africa`
+- `north_america`
+- `central_america`
+- `south_america`
+- `caribbean`
+- `oceania`
+- `pacific_islands`
+
+### B) CLIMATE TAGS
+
+#### climate_type (select ONE primary climate)
+- `tropical` — hot and humid year-round
+- `subtropical` — warm, mild winters
+- `mediterranean` — dry summers, mild wet winters
+- `continental` — hot summers, cold winters
+- `oceanic` — mild, often cloudy, frequent rain
+- `desert` — hot and dry
+- `semi_arid` — dry but not extreme desert
+- `subarctic` — very cold winters, short summers
+- `arctic` — extremely cold year-round
+- `highland` — varies with altitude
+- `monsoon` — distinct wet and dry seasons
+
+#### weather_characteristics (select ALL that apply)
+- `sunny_most_year`
+- `rainy_season`
+- `snowy_winters`
+- `mild_year_round`
+- `extreme_heat_summer`
+- `extreme_cold_winter`
+- `humid`
+- `dry`
+- `windy`
+- `unpredictable`
+
+### C) SEASONAL FEATURES
+
+Select ALL that tourists can experience in this city during specific seasons:
+
+**Winter features:**
+- `christmas_period` — Christmas markets, holiday atmosphere
+- `ski_season` — nearby skiing available
+- `northern_lights` — aurora viewing possible
+- `winter_festivals` — winter-specific events
+- `ice_hotels` — ice hotels nearby
+- `snowy_landscapes` — reliable snow scenery
+
+**Spring features:**
+- `cherry_blossom` — cherry blossom season
+- `tulip_season` — tulip blooms
+- `spring_festivals` — spring events
+- `easter` — significant Easter celebrations
+
+**Summer features:**
+- `beach_season` — good beach weather
+- `midnight_sun` — midnight sun phenomenon
+- `summer_festivals` — summer events/festivals
+- `outdoor_concerts` — outdoor music/events
+- `summer_holidays` — peak family vacation time
+
+**Autumn features:**
+- `autumn_foliage` — fall colors
+- `harvest_festivals` — harvest events
+- `wine_harvest` — grape harvest/wine events
+- `oktoberfest` — Oktoberfest or similar
+- `halloween` — significant Halloween events
+
+**Other:**
+- `ramadan` — significant Ramadan observance
+- `lunar_new_year` — Lunar New Year celebrations
+- `monsoon_avoid` — has monsoon season to avoid
+
+### D) INFRASTRUCTURE
+
+Select ONE:
+- `developed` — good infrastructure, reliable services
+- `developing` — basic infrastructure, some limitations
+- `remote` — limited infrastructure
+- `adventure_infrastructure` — good for adventure tourism despite being remote
+
+### E) TOURISM CHARACTERISTICS
+
+Select ALL that the city is genuinely known for:
+- `beach_destination` — famous for beaches
+- `ski_resort` — known for skiing
+- `cultural_hub` — major cultural center
+- `historical_city` — significant history/heritage
+- `party_destination` — known for nightlife/parties
+- `foodie_destination` — famous food scene
+- `shopping_destination` — major shopping
+- `adventure_base` — base for adventure activities
+- `wellness_destination` — spas, wellness tourism
+- `business_hub` — major business center
+- `romantic_destination` — popular for couples
+- `family_destination` — great for families
+- `backpacker_friendly` — budget-friendly, hostel scene
+- `luxury_destination` — known for luxury tourism
+- `spiritual_center` — spiritual/religious significance
+- `art_capital` — major art scene
+- `music_city` — known for music
+- `tech_hub` — technology center
+- `university_town` — major university presence
+
+### F) SPECIAL FEATURES
+
+Select ALL that apply:
+- `unesco_sites` — has UNESCO World Heritage sites
+- `theme_parks` — has major theme parks
+- `casinos` — legal gambling, casinos
+- `cannabis_legal` — legal recreational cannabis
+- `lgbtq_friendly` — known for LGBTQ+ acceptance
+- `nightlife_hub` — famous nightlife
+- `wine_region` — in or near wine country
+- `dive_sites` — access to diving
+- `surf_spots` — access to surfing
+- `safari_access` — access to wildlife safaris
+- `ancient_ruins` — archaeological sites
+- `royal_heritage` — palaces, royal history
+- `religious_significance` — pilgrimage site
+- `film_location` — famous filming location
+- `cruise_port` — cruise ship destination
+- `hot_springs` — natural hot springs
+
+---
+
+## CITIES TO INCLUDE
+
+Create entries for ALL cities listed below. Research each city to accurately assign tags.
+
+### EUROPE (95 cities)
+
+#### Western Europe (25)
+- London, UK
+- Paris, France
+- Amsterdam, Netherlands
+- Rotterdam, Netherlands
+- Brussels, Belgium
+- Bruges, Belgium
+- Munich, Germany
+- Berlin, Germany
+- Frankfurt, Germany
+- Hamburg, Germany
+- Cologne, Germany
+- Düsseldorf, Germany
+- Stuttgart, Germany
+- Dresden, Germany
+- Vienna, Austria
+- Salzburg, Austria
+- Innsbruck, Austria
+- Zurich, Switzerland
+- Geneva, Switzerland
+- Lucerne, Switzerland
+- Interlaken, Switzerland
+- Luxembourg City, Luxembourg
+- Strasbourg, France
+- Lyon, France
+- Nice, France
+
+#### Southern Europe (40)
+- Rome, Italy
+- Florence, Italy
+- Venice, Italy
+- Milan, Italy
+- Naples, Italy
+- Amalfi, Italy
+- Cinque Terre, Italy
+- Bologna, Italy
+- Verona, Italy
+- Turin, Italy
+- Palermo, Sicily
+- Sardinia (Cagliari), Italy
+- Barcelona, Spain
+- Madrid, Spain
+- Seville, Spain
+- Valencia, Spain
+- Malaga, Spain
+- Granada, Spain
+- Bilbao, Spain
+- San Sebastian, Spain
+- Ibiza, Spain
+- Mallorca, Spain
+- Tenerife, Canary Islands
+- Lisbon, Portugal
+- Porto, Portugal
+- Algarve (Faro), Portugal
+- Madeira, Portugal
+- Athens, Greece
+- Santorini, Greece
+- Mykonos, Greece
+- Crete (Heraklion), Greece
+- Rhodes, Greece
+- Corfu, Greece
+- Dubrovnik, Croatia
+- Split, Croatia
+- Hvar, Croatia
+- Monaco
+- Malta (Valletta)
+- Cyprus (Paphos)
+- Cyprus (Limassol)
+
+#### Northern Europe (20)
+- Stockholm, Sweden
+- Gothenburg, Sweden
+- Copenhagen, Denmark
+- Oslo, Norway
+- Bergen, Norway
+- Tromsø, Norway
+- Stavanger, Norway
+- Helsinki, Finland
+- Rovaniemi, Finland
+- Reykjavik, Iceland
+- Edinburgh, Scotland
+- Glasgow, Scotland
+- Dublin, Ireland
+- Galway, Ireland
+- Cork, Ireland
+- Manchester, UK
+- Liverpool, UK
+- Bath, UK
+- Oxford, UK
+- Cambridge, UK
+
+#### Eastern Europe (20)
+- Prague, Czech Republic
+- Český Krumlov, Czech Republic
+- Budapest, Hungary
+- Warsaw, Poland
+- Krakow, Poland
+- Gdansk, Poland
+- Wroclaw, Poland
+- Bucharest, Romania
+- Brasov, Romania
+- Sofia, Bulgaria
+- Belgrade, Serbia
+- Zagreb, Croatia
+- Ljubljana, Slovenia
+- Bled, Slovenia
+- Tallinn, Estonia
+- Riga, Latvia
+- Vilnius, Lithuania
+- Kyiv, Ukraine
+- Moscow, Russia
+- St. Petersburg, Russia
+
+---
+
+### ASIA (120 cities)
+
+#### East Asia (35)
+- Tokyo, Japan
+- Kyoto, Japan
+- Osaka, Japan
+- Hiroshima, Japan
+- Nara, Japan
+- Hakone, Japan
+- Okinawa, Japan
+- Sapporo, Japan
+- Fukuoka, Japan
+- Nagoya, Japan
+- Seoul, South Korea
+- Busan, South Korea
+- Jeju Island, South Korea
+- Incheon, South Korea
+- Beijing, China
+- Shanghai, China
+- Guangzhou, China
+- Shenzhen, China
+- Chengdu, China
+- Xi'an, China
+- Hangzhou, China
+- Suzhou, China
+- Guilin, China
+- Lijiang, China
+- Zhangjiajie, China
+- Chongqing, China
+- Nanjing, China
+- Qingdao, China
+- Harbin, China
+- Kunming, China
+- Hong Kong
+- Macau
+- Taipei, Taiwan
+- Kaohsiung, Taiwan
+- Taichung, Taiwan
+
+#### Southeast Asia (37)
+- Bangkok, Thailand
+- Phuket, Thailand
+- Chiang Mai, Thailand
+- Chiang Rai, Thailand
+- Koh Samui, Thailand
+- Krabi, Thailand
+- Pattaya, Thailand
+- Koh Phi Phi, Thailand
+- Singapore
+- Kuala Lumpur, Malaysia
+- Penang, Malaysia
+- Langkawi, Malaysia
+- Malacca, Malaysia
+- Kota Kinabalu, Malaysia
+- Bali (Ubud), Indonesia
+- Bali (Seminyak), Indonesia
+- Jakarta, Indonesia
+- Yogyakarta, Indonesia
+- Lombok, Indonesia
+- Komodo, Indonesia
+- Ho Chi Minh City, Vietnam
+- Hanoi, Vietnam
+- Da Nang, Vietnam
+- Hoi An, Vietnam
+- Ha Long Bay, Vietnam
+- Nha Trang, Vietnam
+- Phu Quoc, Vietnam
+- Manila, Philippines
+- Boracay, Philippines
+- Palawan (El Nido), Philippines
+- Cebu, Philippines
+- Siargao, Philippines
+- Phnom Penh, Cambodia
+- Siem Reap, Cambodia
+- Luang Prabang, Laos
+- Vientiane, Laos
+- Yangon, Myanmar
+
+#### South Asia (25)
+- Mumbai, India
+- Delhi, India
+- Goa, India
+- Jaipur, India
+- Agra, India
+- Kerala (Kochi), India
+- Varanasi, India
+- Udaipur, India
+- Bangalore, India
+- Hyderabad, India
+- Chennai, India
+- Kolkata, India
+- Rishikesh, India
+- Darjeeling, India
+- Amritsar, India
+- Jodhpur, India
+- Kathmandu, Nepal
+- Pokhara, Nepal
+- Colombo, Sri Lanka
+- Kandy, Sri Lanka
+- Galle, Sri Lanka
+- Ella, Sri Lanka
+- Maldives (Malé)
+- Dhaka, Bangladesh
+- Thimphu, Bhutan
+
+#### Central Asia (9)
+- Tashkent, Uzbekistan
+- Samarkand, Uzbekistan
+- Bukhara, Uzbekistan
+- Almaty, Kazakhstan
+- Astana, Kazakhstan
+- Baku, Azerbaijan
+- Tbilisi, Georgia
+- Batumi, Georgia
+- Yerevan, Armenia
+
+#### Middle East (21)
+- Dubai, UAE
+- Abu Dhabi, UAE
+- Doha, Qatar
+- Tel Aviv, Israel
+- Jerusalem, Israel
+- Eilat, Israel
+- Amman, Jordan
+- Petra, Jordan
+- Dead Sea, Jordan
+- Istanbul, Turkey
+- Cappadocia, Turkey
+- Antalya, Turkey
+- Bodrum, Turkey
+- Izmir, Turkey
+- Pamukkale, Turkey
+- Muscat, Oman
+- Salalah, Oman
+- Riyadh, Saudi Arabia
+- Jeddah, Saudi Arabia
+- Bahrain (Manama)
+- Kuwait City, Kuwait
+
+---
+
+### AFRICA (45 cities)
+
+#### North Africa (13)
+- Marrakech, Morocco
+- Fez, Morocco
+- Casablanca, Morocco
+- Chefchaouen, Morocco
+- Essaouira, Morocco
+- Tangier, Morocco
+- Cairo, Egypt
+- Luxor, Egypt
+- Aswan, Egypt
+- Sharm El Sheikh, Egypt
+- Hurghada, Egypt
+- Alexandria, Egypt
+- Tunis, Tunisia
+
+#### Sub-Saharan Africa (32)
+- Cape Town, South Africa
+- Johannesburg, South Africa
+- Durban, South Africa
+- Kruger National Park, South Africa
+- Garden Route, South Africa
+- Victoria Falls, Zimbabwe/Zambia
+- Livingstone, Zambia
+- Harare, Zimbabwe
+- Nairobi, Kenya
+- Masai Mara, Kenya
+- Mombasa, Kenya
+- Zanzibar, Tanzania
+- Serengeti, Tanzania
+- Arusha, Tanzania
+- Dar es Salaam, Tanzania
+- Kilimanjaro region, Tanzania
+- Mauritius
+- Seychelles
+- Reunion Island
+- Addis Ababa, Ethiopia
+- Lalibela, Ethiopia
+- Accra, Ghana
+- Lagos, Nigeria
+- Abuja, Nigeria
+- Kigali, Rwanda
+- Kampala, Uganda
+- Windhoek, Namibia
+- Sossusvlei, Namibia
+- Etosha, Namibia
+- Gaborone, Botswana
+- Chobe National Park, Botswana
+- Okavango Delta, Botswana
+- Dakar, Senegal
+- Maputo, Mozambique
+
+---
+
+### AMERICAS (90 cities)
+
+#### North America - USA (40)
+- New York City, USA
+- Los Angeles, USA
+- San Francisco, USA
+- Las Vegas, USA
+- Miami, USA
+- Orlando, USA
+- Chicago, USA
+- Boston, USA
+- Washington D.C., USA
+- Seattle, USA
+- San Diego, USA
+- New Orleans, USA
+- Nashville, USA
+- Austin, USA
+- Denver, USA
+- Honolulu, Hawaii
+- Maui, Hawaii
+- Kauai, Hawaii
+- Big Island, Hawaii
+- Anchorage, Alaska
+- Phoenix, USA
+- Scottsdale, USA
+- Portland, USA
+- Savannah, USA
+- Charleston, USA
+- Philadelphia, USA
+- Atlanta, USA
+- Dallas, USA
+- Houston, USA
+- Santa Fe, USA
+- Aspen, USA
+- Park City, USA
+- Key West, USA
+- San Antonio, USA
+- Minneapolis, USA
+- Salt Lake City, USA
+- Palm Springs, USA
+- Napa Valley, USA
+- Yellowstone area, USA
+- Grand Canyon area, USA
+
+#### North America - Canada (12)
+- Toronto, Canada
+- Vancouver, Canada
+- Montreal, Canada
+- Quebec City, Canada
+- Banff, Canada
+- Whistler, Canada
+- Calgary, Canada
+- Ottawa, Canada
+- Victoria, Canada
+- Niagara Falls, Canada
+- Halifax, Canada
+- Jasper, Canada
+
+#### Central America & Caribbean (25)
+- Mexico City, Mexico
+- Cancun, Mexico
+- Playa del Carmen, Mexico
+- Tulum, Mexico
+- Cabo San Lucas, Mexico
+- Puerto Vallarta, Mexico
+- Oaxaca, Mexico
+- Guadalajara, Mexico
+- San Miguel de Allende, Mexico
+- Havana, Cuba
+- Varadero, Cuba
+- San Juan, Puerto Rico
+- Punta Cana, Dominican Republic
+- Nassau, Bahamas
+- Montego Bay, Jamaica
+- Negril, Jamaica
+- Aruba
+- Curaçao
+- St. Lucia
+- Barbados
+- Turks and Caicos
+- Cayman Islands
+- Antigua
+- St. Maarten
+- Costa Rica (San José)
+- Costa Rica (Manuel Antonio)
+- Costa Rica (Arenal)
+- Panama City, Panama
+- Bocas del Toro, Panama
+- Belize City, Belize
+- San Pedro, Belize
+- Guatemala City, Guatemala
+- Antigua Guatemala
+
+#### South America (20)
+- Rio de Janeiro, Brazil
+- São Paulo, Brazil
+- Salvador, Brazil
+- Florianópolis, Brazil
+- Iguazu Falls, Brazil/Argentina
+- Buenos Aires, Argentina
+- Mendoza, Argentina
+- Bariloche, Argentina
+- Patagonia (El Calafate), Argentina
+- Lima, Peru
+- Cusco, Peru
+- Machu Picchu, Peru
+- Arequipa, Peru
+- Bogotá, Colombia
+- Cartagena, Colombia
+- Medellín, Colombia
+- Santiago, Chile
+- Valparaíso, Chile
+- Atacama Desert, Chile
+- Quito, Ecuador
+- Galápagos Islands, Ecuador
+- Montevideo, Uruguay
+- Punta del Este, Uruguay
+- La Paz, Bolivia
+- Uyuni, Bolivia
+- Asunción, Paraguay
+
+---
+
+### OCEANIA (30 cities)
+
+#### Australia (15)
+- Sydney, Australia
+- Melbourne, Australia
+- Brisbane, Australia
+- Perth, Australia
+- Gold Coast, Australia
+- Cairns, Australia
+- Great Barrier Reef, Australia
+- Adelaide, Australia
+- Hobart, Tasmania
+- Darwin, Australia
+- Uluru (Ayers Rock), Australia
+- Byron Bay, Australia
+- Whitsundays, Australia
+- Great Ocean Road, Australia
+- Margaret River, Australia
+
+#### New Zealand (8)
+- Auckland, New Zealand
+- Queenstown, New Zealand
+- Wellington, New Zealand
+- Rotorua, New Zealand
+- Christchurch, New Zealand
+- Milford Sound, New Zealand
+- Hobbiton, New Zealand
+- Bay of Islands, New Zealand
+
+#### Pacific Islands (10)
+- Fiji (Nadi)
+- Fiji (Suva)
+- Bora Bora, French Polynesia
+- Tahiti, French Polynesia
+- Moorea, French Polynesia
+- Samoa (Apia)
+- Vanuatu (Port Vila)
+- New Caledonia (Nouméa)
+- Palau
+- Guam
+
+---
+
+## OUTPUT FORMAT
+```json
+{
+  "cities": [
+    {
+      "city": "Prague",
+      "country": "Czech Republic",
+      "region": "eastern_europe",
+      "tags": {
+        "geo_type": ["urban", "riverside"],
+        "geo_region": ["eastern_europe"],
+        "climate_type": ["continental"],
+        "weather_characteristics": ["snowy_winters", "extreme_cold_winter"],
+        "seasonal_features": ["christmas_period", "autumn_foliage", "spring_festivals"],
+        "infrastructure": ["developed"],
+        "tourism_characteristics": ["historical_city", "cultural_hub", "romantic_destination", "foodie_destination", "backpacker_friendly"],
+        "special_features": ["unesco_sites", "nightlife_hub"]
+      }
+    },
+    {
+      "city": "Bali",
+      "country": "Indonesia",
+      "region": "southeast_asia",
+      "tags": {
+        "geo_type": ["island", "coastal", "tropical", "volcanic"],
+        "geo_region": ["southeast_asia"],
+        "climate_type": ["tropical"],
+        "weather_characteristics": ["humid", "rainy_season", "sunny_most_year"],
+        "seasonal_features": ["beach_season", "summer_holidays"],
+        "infrastructure": ["developed"],
+        "tourism_characteristics": ["beach_destination", "wellness_destination", "spiritual_center", "romantic_destination", "backpacker_friendly", "foodie_destination", "adventure_base"],
+        "special_features": ["surf_spots", "dive_sites", "religious_significance", "hot_springs"]
+      }
+    },
+    {
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "region": "middle_east",
+      "tags": {
+        "geo_type": ["urban", "coastal", "desert"],
+        "geo_region": ["middle_east"],
+        "climate_type": ["desert"],
+        "weather_characteristics": ["extreme_heat_summer", "sunny_most_year", "dry"],
+        "seasonal_features": ["ramadan", "winter_festivals"],
+        "infrastructure": ["developed"],
+        "tourism_characteristics": ["luxury_destination", "shopping_destination", "business_hub", "beach_destination", "family_destination"],
+        "special_features": ["theme_parks", "nightlife_hub", "cruise_port"]
+      }
+    }
+  ]
+}
+```
+
+---
+
+## REQUIREMENTS
+
+1. **Complete coverage**: Every city from the list MUST have an entry (380+ cities)
+
+2. **Strict vocabulary**: Use ONLY tag values from the VOCABULARY REFERENCE section — no synonyms, no new values
+
+3. **Accurate tagging**: Research each city to ensure accuracy
+   - Use web search to verify climate, features, characteristics
+   - Check what each city is actually known for
+
+4. **Multiple geo_type when applicable**: 
+   - Sydney = `["urban", "coastal"]`
+   - Queenstown = `["urban", "mountain", "lakeside"]`
+   - Dubai = `["urban", "coastal", "desert"]`
+
+5. **Seasonal accuracy for hemispheres**:
+   - Northern hemisphere: winter = Dec-Feb, summer = Jun-Aug
+   - Southern hemisphere: winter = Jun-Aug, summer = Dec-Feb
+   - Tag seasonal features according to LOCAL calendar
+   - Example: Sydney has `christmas_period` but weather is summer
+
+6. **Honest tourism_characteristics**: Only what city is genuinely known for
+   - ❌ Don't add `beach_destination` to Prague
+   - ❌ Don't add `ski_resort` to Miami
+   - ✅ Add `ski_resort` to Whistler
+
+7. **Web Research Required**:
+   - Verify climate data
+   - Check tourism features
+   - Verify seasonal events
+   - Check infrastructure level
+   - Verify special features (UNESCO, casinos, cannabis laws, etc.)
+
+---
+
+## VALIDATION CHECKLIST
+
+Before finalizing, verify:
+
+- [ ] All ~380 cities have entries
+- [ ] Every city has ALL tag categories filled
+- [ ] Tags use EXACT values from VOCABULARY REFERENCE (check spelling!)
+- [ ] Seasonal features correct for hemisphere
+- [ ] Coastal cities have `coastal` in geo_type
+- [ ] Mountain cities have `mountain` in geo_type
+- [ ] Island destinations have `island` in geo_type
+- [ ] Climate types match reality
+- [ ] UNESCO sites correctly tagged
+- [ ] Party destinations have `party_destination` and `nightlife_hub`
+- [ ] Romantic destinations have `romantic_destination`
+- [ ] Family destinations (Orlando, etc.) have `family_destination` and `theme_parks`
+- [ ] No typos in tag values
+
+---
+
+## IMPORTANT NOTES
+
+1. **Tag consistency is CRITICAL**: If value not in VOCABULARY REFERENCE — don't use it
+
+2. **Think about filtering**: 
+   - "If user wants surfing, will cities with `surf_spots` be found?"
+   - "If user travels winter to Europe, will `christmas_period` cities appear?"
+
+3. **Be accurate over comprehensive**: Fewer accurate tags > many questionable ones
+
+4. **Add missing major destinations**: If important tourist city not listed — add it

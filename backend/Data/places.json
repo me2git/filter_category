@@ -1,0 +1,990 @@
+{
+  "places": {
+    "Cultural_Heritage_Sites": {
+      "description": "Museums, historical sites, and cultural landmarks showcasing art, history, and heritage",
+      "subcategories": [
+        {
+          "name": "Art Museums",
+          "description": "Museums focused on visual arts from classical to contemporary",
+          "search_query_template": "art museums in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly", "wheelchair_accessible"],
+            "vibe": ["instagram_worthy", "bucket_list", "quiet_relaxing"]
+          }
+        },
+        {
+          "name": "History Museums",
+          "description": "Museums covering local, national, or world history",
+          "search_query_template": "history museums in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly", "wheelchair_accessible"],
+            "vibe": ["family_friendly_atmosphere", "bucket_list"]
+          }
+        },
+        {
+          "name": "Science & Technology Museums",
+          "description": "Interactive museums showcasing science, technology, and innovation",
+          "search_query_template": "science museums in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity", "accessibility_friendly"],
+            "vibe": ["family_friendly_atmosphere", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Archaeological & Ancient Ruins",
+          "description": "Ancient ruins, archaeological sites, and excavation areas",
+          "search_query_template": "archaeological sites in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural", "desert", "mountain", "coastal"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["all_season", "spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["not_for_toddlers"],
+            "age_appropriate": ["all_ages", "teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity", "physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Religious Sites - Temples & Shrines",
+          "description": "Buddhist, Hindu, Shinto temples and sacred shrines",
+          "search_query_template": "temples and shrines in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural", "mountain"],
+            "geo_region": ["east_asia", "southeast_asia", "south_asia"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": ["cherry_blossom", "autumn_foliage"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["quiet_relaxing", "bucket_list", "instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Religious Sites - Churches & Cathedrals",
+          "description": "Historic churches, cathedrals, basilicas, and chapels",
+          "search_query_template": "churches and cathedrals in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["western_europe", "eastern_europe", "southern_europe", "north_america", "south_america"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": ["christmas_period", "easter"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["quiet_relaxing", "bucket_list", "instagram_worthy", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Religious Sites - Mosques",
+          "description": "Historic and modern mosques open to visitors",
+          "search_query_template": "mosques in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["middle_east", "north_africa", "south_asia", "southeast_asia", "central_asia"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": ["ramadan"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "time_specific"],
+            "physical": ["low_activity"],
+            "vibe": ["quiet_relaxing", "bucket_list", "instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Castles & Palaces",
+          "description": "Royal palaces, medieval castles, historic fortresses, and estates",
+          "search_query_template": "castles and palaces in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural", "mountain"],
+            "geo_region": ["western_europe", "eastern_europe", "northern_europe", "southern_europe", "east_asia", "middle_east"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": ["christmas_period"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok", "requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy", "romantic_setting", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Monuments & Memorials",
+          "description": "Historic monuments, war memorials, and commemorative sites",
+          "search_query_template": "monuments and memorials in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "bucket_list", "quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Art Galleries & Studios",
+          "description": "Contemporary art galleries, sculpture parks, and artist studios",
+          "search_query_template": "art galleries in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up", "adults_only"],
+            "budget_level": ["free", "budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "hidden_gem", "local_favorite"]
+          }
+        }
+      ]
+    },
+    "Natural_Attractions": {
+      "description": "Parks, beaches, mountains, and natural wonders",
+      "subcategories": [
+        {
+          "name": "National Parks & Nature Reserves",
+          "description": "Protected wilderness areas with trails and scenic landscapes",
+          "search_query_template": "national parks near {city}",
+          "tags": {
+            "geo_type": ["mountain", "forest", "coastal", "desert", "plains"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": ["autumn_foliage", "cherry_blossom"],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok", "requires_equipment"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity", "physically_demanding"],
+            "vibe": ["instagram_worthy", "bucket_list", "quiet_relaxing", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Beaches & Coastal Areas",
+          "description": "Sandy beaches, coves, and coastal recreational areas",
+          "search_query_template": "beaches in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island", "tropical"],
+            "geo_region": ["all_coastal"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["summer", "all_season"],
+            "season_special": ["summer_holidays"],
+            "weather_requirement": ["warm_weather_required", "dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": ["business_travel"],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["instagram_worthy", "quiet_relaxing", "romantic_setting", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Mountains & Peaks",
+          "description": "Mountain viewpoints, peaks, and alpine landscapes",
+          "search_query_template": "mountains near {city}",
+          "tags": {
+            "geo_type": ["mountain", "volcanic"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote", "adventure_infrastructure"],
+            "season": ["spring", "summer", "autumn", "winter"],
+            "season_special": ["ski_season", "autumn_foliage"],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_toddlers"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding", "moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Waterfalls",
+          "description": "Scenic waterfalls and cascades",
+          "search_query_template": "waterfalls near {city}",
+          "tags": {
+            "geo_type": ["mountain", "forest", "tropical", "riverside"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": ["monsoon_avoid"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "romantic_setting", "quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Lakes & Rivers",
+          "description": "Scenic lakes, rivers, and waterside areas",
+          "search_query_template": "lakes near {city}",
+          "tags": {
+            "geo_type": ["lakeside", "riverside", "mountain", "forest"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["quiet_relaxing", "romantic_setting", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Botanical Gardens & Arboretums",
+          "description": "Curated gardens with diverse plant collections",
+          "search_query_template": "botanical gardens in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": ["cherry_blossom", "autumn_foliage"],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented", "senior_friendly"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly", "wheelchair_accessible"],
+            "vibe": ["quiet_relaxing", "romantic_setting", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Public Parks & Gardens",
+          "description": "City parks, public gardens, and green spaces",
+          "search_query_template": "parks in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": ["cherry_blossom"],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly", "wheelchair_accessible"],
+            "vibe": ["quiet_relaxing", "local_favorite", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Caves & Grottos",
+          "description": "Natural caves, underground formations, and grottos",
+          "search_query_template": "caves near {city}",
+          "tags": {
+            "geo_type": ["mountain", "coastal", "limestone"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_toddlers"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_guide", "requires_equipment"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity", "physically_demanding"],
+            "vibe": ["bucket_list", "off_beaten_path", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Hot Springs & Thermal Baths",
+          "description": "Natural hot springs and geothermal bathing areas",
+          "search_query_template": "hot springs in {city}",
+          "tags": {
+            "geo_type": ["mountain", "volcanic", "rural"],
+            "geo_region": ["east_asia", "western_europe", "north_america", "south_america", "oceania"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["winter", "autumn", "spring", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only", "teens_and_up"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok", "requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["quiet_relaxing", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Volcanic Sites",
+          "description": "Active and dormant volcanoes, lava fields, geothermal areas",
+          "search_query_template": "volcanoes near {city}",
+          "tags": {
+            "geo_type": ["volcanic", "mountain", "island"],
+            "geo_region": ["east_asia", "southeast_asia", "south_america", "oceania", "central_america"],
+            "infrastructure": ["developing", "remote", "adventure_infrastructure"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "business_travel"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_guide", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "off_beaten_path", "instagram_worthy"]
+          }
+        }
+      ]
+    },
+    "Entertainment_Venues": {
+      "description": "Theme parks, zoos, aquariums, and entertainment facilities",
+      "subcategories": [
+        {
+          "name": "Theme Parks & Amusement Parks",
+          "description": "Major theme parks with rides and attractions",
+          "search_query_template": "theme parks in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["north_america", "western_europe", "east_asia", "southeast_asia", "middle_east"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": ["summer_holidays", "christmas_period"],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["family_young_children", "family_teens", "group_friends", "romantic_couple"],
+            "trip_exclude": ["business_travel"],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity", "physically_demanding"],
+            "vibe": ["family_friendly_atmosphere", "bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Water Parks",
+          "description": "Aquatic theme parks with water slides and pools",
+          "search_query_template": "water parks in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "tropical"],
+            "geo_region": ["north_america", "western_europe", "southern_europe", "southeast_asia", "middle_east"],
+            "infrastructure": ["developed"],
+            "season": ["summer", "all_season"],
+            "season_special": ["summer_holidays"],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": ["business_travel", "romantic_couple"],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Zoos & Wildlife Parks",
+          "description": "Zoological parks and wildlife sanctuaries",
+          "search_query_template": "zoos in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["family_young_children", "family_teens", "couple_travel", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["family_friendly_atmosphere", "bucket_list"]
+          }
+        },
+        {
+          "name": "Aquariums & Marine Centers",
+          "description": "Public aquariums and marine life exhibitions",
+          "search_query_template": "aquariums in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["family_young_children", "family_teens", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok", "requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly", "wheelchair_accessible"],
+            "vibe": ["family_friendly_atmosphere", "instagram_worthy", "quiet_relaxing"]
+          }
+        }
+      ]
+    },
+    "Urban_Landmarks": {
+      "description": "Iconic buildings, observation decks, and architectural marvels",
+      "subcategories": [
+        {
+          "name": "Observation Decks & Viewpoints",
+          "description": "Towers, skyscrapers, and high viewpoints with city panoramas",
+          "search_query_template": "observation decks in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "bucket_list", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Iconic Buildings & Architecture",
+          "description": "Famous architectural landmarks and modern structures",
+          "search_query_template": "famous buildings in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "Bridges & Engineering Marvels",
+          "description": "Historic and modern bridges, dams, and infrastructure landmarks",
+          "search_query_template": "famous bridges in {city}",
+          "tags": {
+            "geo_type": ["urban", "riverside", "coastal"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Lighthouses",
+          "description": "Historic and operational lighthouses",
+          "search_query_template": "lighthouses near {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all_coastal"],
+            "infrastructure": ["developed", "remote"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "off_beaten_path", "quiet_relaxing"]
+          }
+        }
+      ]
+    },
+    "Markets_Shopping_Districts": {
+      "description": "Traditional markets, bazaars, and shopping areas",
+      "subcategories": [
+        {
+          "name": "Traditional Markets & Bazaars",
+          "description": "Historic souks, local markets, and traditional bazaars",
+          "search_query_template": "traditional markets in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": ["ramadan"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["local_favorite", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Night Markets",
+          "description": "Evening and late-night street markets",
+          "search_query_template": "night markets in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["east_asia", "southeast_asia"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "instagram_worthy", "family_friendly_atmosphere", "bucket_list"]
+          }
+        },
+        {
+          "name": "Flea Markets & Antiques",
+          "description": "Vintage markets, flea markets, and antique fairs",
+          "search_query_template": "flea markets in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["weekend_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "hidden_gem", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Food Markets & Halls",
+          "description": "Covered food markets and gourmet food halls",
+          "search_query_template": "food markets in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["local_favorite", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Christmas Markets",
+          "description": "Seasonal holiday markets (November-January)",
+          "search_query_template": "christmas markets in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "eastern_europe", "northern_europe"],
+            "infrastructure": ["developed"],
+            "season": ["winter"],
+            "season_special": ["christmas_period"],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["seasonal_only"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "romantic_setting", "family_friendly_atmosphere", "bucket_list"]
+          }
+        }
+      ]
+    },
+    "Neighborhoods_Districts": {
+      "description": "Historic quarters, ethnic districts, and notable neighborhoods",
+      "subcategories": [
+        {
+          "name": "Historic Old Towns",
+          "description": "Preserved historic city centers and medieval quarters",
+          "search_query_template": "old town in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy", "local_favorite", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Arts & Design Districts",
+          "description": "Creative neighborhoods with galleries, studios, and street art",
+          "search_query_template": "arts district in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "local_favorite", "hidden_gem"]
+          }
+        },
+        {
+          "name": "Waterfront & Harbor Areas",
+          "description": "Revitalized waterfronts, marina districts, and harbor walks",
+          "search_query_template": "waterfront in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "riverside"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity", "accessibility_friendly"],
+            "vibe": ["romantic_setting", "family_friendly_atmosphere", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Ethnic & Cultural Enclaves",
+          "description": "Chinatowns, Little Italys, and cultural neighborhood districts",
+          "search_query_template": "ethnic neighborhoods in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": ["lunar_new_year"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages", "family_oriented"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Nightlife Districts",
+          "description": "Entertainment districts known for bars, clubs, and nightlife",
+          "search_query_template": "nightlife district in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "business_travel"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["party_atmosphere", "local_favorite"]
+          }
+        }
+      ]
+    },
+    "Scenic_Viewpoints": {
+      "description": "Panoramic viewpoints and scenic overlooks",
+      "subcategories": [
+        {
+          "name": "Mountain Viewpoints",
+          "description": "Elevated lookouts with mountain and valley views",
+          "search_query_template": "scenic viewpoints near {city}",
+          "tags": {
+            "geo_type": ["mountain"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing", "remote"],
+            "season": ["spring", "summer", "autumn", "winter"],
+            "season_special": ["autumn_foliage"],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["free", "budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity", "physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy", "romantic_setting", "quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Coastal Lookouts",
+          "description": "Cliffside and ocean viewpoints",
+          "search_query_template": "coastal viewpoints near {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all_coastal"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "quiet_relaxing", "bucket_list"]
+          }
+        },
+        {
+          "name": "Sunset/Sunrise Spots",
+          "description": "Prime locations for golden hour photography",
+          "search_query_template": "sunset spots in {city}",
+          "tags": {
+            "geo_type": ["all"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["time_specific"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        }
+      ]
+    },
+    "Sports_Performance_Venues": {
+      "description": "Stadiums, arenas, and historic performance venues (as landmarks)",
+      "subcategories": [
+        {
+          "name": "Historic Stadiums & Arenas",
+          "description": "Iconic sports venues offering tours",
+          "search_query_template": "stadium tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "local_favorite"]
+          }
+        },
+        {
+          "name": "Historic Theaters & Opera Houses",
+          "description": "Grand theaters, opera houses, and performance halls (as architectural landmarks)",
+          "search_query_template": "historic theaters in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["bucket_list", "instagram_worthy", "romantic_setting"]
+          }
+        }
+      ]
+    }
+  }
+}

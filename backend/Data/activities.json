@@ -1,0 +1,2307 @@
+{
+  "activities": {
+    "Walking & City Tours": {
+      "description": "Guided and self-guided walking experiences through urban and cultural areas",
+      "subcategories": [
+        {
+          "name": "Historical Walking Tours",
+          "description": "Guided walks through historic districts and landmarks",
+          "search_query_template": "historical walking tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "bucket_list"]
+          }
+        },
+        {
+          "name": "Food Walking Tours",
+          "description": "Culinary-focused walks with tastings at multiple venues",
+          "search_query_template": "food walking tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "time_specific"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Street Art & Graffiti Tours",
+          "description": "Guided walks exploring urban art and graffiti culture",
+          "search_query_template": "street art tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "north_america", "south_america", "east_asia", "oceania"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "off_beaten_path", "local_favorite"]
+          }
+        },
+        {
+          "name": "Ghost & Paranormal Tours",
+          "description": "Evening tours exploring haunted locations and local legends",
+          "search_query_template": "ghost tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["western_europe", "eastern_europe", "north_america", "east_asia"],
+            "season": ["all_season"],
+            "season_special": ["halloween"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["off_beaten_path"]
+          }
+        },
+        {
+          "name": "Architecture Tours",
+          "description": "Specialized walks focusing on building design and urban planning",
+          "search_query_template": "architecture tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Pub Crawls & Bar Hopping",
+          "description": "Guided nightlife tours visiting multiple bars and pubs",
+          "search_query_template": "pub crawls in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["western_europe", "eastern_europe", "north_america", "south_america", "oceania"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "business_travel"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["party_atmosphere", "local_favorite"]
+          }
+        }
+      ]
+    },
+
+    "Vehicle Tours": {
+      "description": "Motorized transportation-based sightseeing experiences",
+      "subcategories": [
+        {
+          "name": "Hop-On Hop-Off Bus Tours",
+          "description": "Flexible sightseeing buses with multiple stops",
+          "search_query_template": "hop on hop off bus tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["touristy"]
+          }
+        },
+        {
+          "name": "Segway Tours",
+          "description": "Guided tours on electric self-balancing vehicles",
+          "search_query_template": "segway tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["western_europe", "north_america", "oceania", "east_asia"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "touristy"]
+          }
+        },
+        {
+          "name": "Vintage Car Tours",
+          "description": "Sightseeing in classic or vintage automobiles",
+          "search_query_template": "vintage car tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "rural"],
+            "geo_region": ["western_europe", "north_america", "caribbean"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Vespa & Scooter Tours",
+          "description": "Self-driven or guided tours on motor scooters",
+          "search_query_template": "vespa scooter tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "rural"],
+            "geo_region": ["southern_europe", "southeast_asia"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_license"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "off_beaten_path", "local_favorite"]
+          }
+        },
+        {
+          "name": "Tuk-Tuk Tours",
+          "description": "Guided tours in traditional three-wheeled vehicles",
+          "search_query_template": "tuk tuk tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["south_asia", "southeast_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "ATV & Off-Road Tours",
+          "description": "Adventure tours on all-terrain vehicles",
+          "search_query_template": "atv off road tours in {city}",
+          "tags": {
+            "geo_type": ["desert", "mountain", "rural", "volcanic"],
+            "geo_region": ["north_america", "central_america", "caribbean", "middle_east", "oceania"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_license"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Water Tours & Cruises": {
+      "description": "Boat-based sightseeing and transportation experiences",
+      "subcategories": [
+        {
+          "name": "River Cruises",
+          "description": "Scenic boat tours along rivers and waterways",
+          "search_query_template": "river cruises in {city}",
+          "tags": {
+            "geo_type": ["urban", "riverside"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "time_specific"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "romantic_setting", "touristy"]
+          }
+        },
+        {
+          "name": "Harbor & Bay Cruises",
+          "description": "Coastal sightseeing tours in harbors and bays",
+          "search_query_template": "harbor cruises in {city}",
+          "tags": {
+            "geo_type": ["coastal", "urban"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "time_specific"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Sunset & Dinner Cruises",
+          "description": "Evening boat tours with dining and entertainment",
+          "search_query_template": "sunset dinner cruises in {city}",
+          "tags": {
+            "geo_type": ["coastal", "riverside", "lakeside"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific", "nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Gondola Rides",
+          "description": "Traditional boat rides in specialized watercraft",
+          "search_query_template": "gondola rides in {city}",
+          "tags": {
+            "geo_type": ["urban", "riverside"],
+            "geo_region": ["southern_europe"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_teens"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list", "touristy"]
+          }
+        },
+        {
+          "name": "Speedboat Tours",
+          "description": "Fast-paced boat tours for thrill-seekers",
+          "search_query_template": "speedboat tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required", "dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "Catamaran & Sailing Tours",
+          "description": "Leisurely sailing experiences on multi-hull or sailing vessels",
+          "search_query_template": "catamaran sailing tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Aerial Experiences": {
+      "description": "Airborne tours and activities offering unique perspectives",
+      "subcategories": [
+        {
+          "name": "Helicopter Tours",
+          "description": "Aerial sightseeing in helicopters",
+          "search_query_template": "helicopter tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "mountain", "island", "volcanic"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Hot Air Balloon Rides",
+          "description": "Sunrise or sunset balloon flights over scenic landscapes",
+          "search_query_template": "hot air balloon rides in {city}",
+          "tags": {
+            "geo_type": ["desert", "mountain", "rural", "volcanic"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Seaplane & Scenic Flights",
+          "description": "Small aircraft tours offering aerial perspectives",
+          "search_query_template": "seaplane scenic flights in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island", "lakeside", "mountain"],
+            "geo_region": ["oceania", "north_america", "southeast_asia", "caribbean"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "Paragliding",
+          "description": "Tandem paragliding flights with instructors",
+          "search_query_template": "paragliding in {city}",
+          "tags": {
+            "geo_type": ["mountain", "coastal"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Day Trips & Multi-Destination Tours": {
+      "description": "Full-day excursions to destinations outside the primary city",
+      "subcategories": [
+        {
+          "name": "Full-Day Countryside Tours",
+          "description": "Day trips exploring rural areas and villages",
+          "search_query_template": "countryside day trips from {city}",
+          "tags": {
+            "geo_type": ["rural", "mountain", "coastal"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["off_beaten_path", "local_favorite"]
+          }
+        },
+        {
+          "name": "Multi-City Tours",
+          "description": "Day trips visiting multiple neighboring cities or towns",
+          "search_query_template": "multi city day tours from {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["touristy"]
+          }
+        },
+        {
+          "name": "Wine Region Day Trips",
+          "description": "Full-day tours to wine-producing areas with tastings",
+          "search_query_template": "wine region day trips from {city}",
+          "tags": {
+            "geo_type": ["rural", "mountain"],
+            "geo_region": ["western_europe", "southern_europe", "north_america", "south_america", "oceania"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": ["autumn_foliage"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Beach & Island Hopping",
+          "description": "Day trips visiting multiple beaches or islands",
+          "search_query_template": "beach island hopping tours from {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["summer"],
+            "season_special": ["summer_holidays"],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific", "seasonal_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "UNESCO Site Day Trips",
+          "description": "Excursions to World Heritage Sites near the city",
+          "search_query_template": "unesco world heritage day trips from {city}",
+          "tags": {
+            "geo_type": ["rural", "urban", "mountain"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Water Sports": {
+      "description": "Active water-based recreational activities",
+      "subcategories": [
+        {
+          "name": "Surfing Lessons",
+          "description": "Beginner to advanced surfing instruction",
+          "search_query_template": "surfing lessons in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["oceania", "southeast_asia", "central_america", "south_america", "caribbean", "western_europe", "north_america"],
+            "season": ["summer", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": ["family_young_children", "business_travel", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["instagram_worthy", "bucket_list", "local_favorite"]
+          }
+        },
+        {
+          "name": "Kayaking Tours",
+          "description": "Guided kayaking in coastal or river environments",
+          "search_query_template": "kayaking tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "riverside", "lakeside", "island"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required", "dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["moderate_activity", "physically_demanding"],
+            "vibe": ["off_beaten_path", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Stand-Up Paddleboarding (SUP)",
+          "description": "Paddleboard rentals and instruction",
+          "search_query_template": "paddleboarding sup in {city}",
+          "tags": {
+            "geo_type": ["coastal", "lakeside", "riverside"],
+            "geo_region": ["all"],
+            "season": ["summer"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok", "requires_equipment"],
+            "timing": ["weather_dependent", "seasonal_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Jet Skiing",
+          "description": "Personal watercraft rental and tours",
+          "search_query_template": "jet ski rentals in {city}",
+          "tags": {
+            "geo_type": ["coastal", "lakeside", "island"],
+            "geo_region": ["all"],
+            "season": ["summer"],
+            "season_special": ["summer_holidays"],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok", "requires_license"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "White Water Rafting",
+          "description": "Guided rafting through rapids",
+          "search_query_template": "white water rafting in {city}",
+          "tags": {
+            "geo_type": ["mountain", "riverside", "rural"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Kitesurfing & Windsurfing",
+          "description": "Wind-powered water sports instruction and rentals",
+          "search_query_template": "kitesurfing windsurfing in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["summer", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["instagram_worthy", "bucket_list", "off_beaten_path"]
+          }
+        }
+      ]
+    },
+
+    "Diving & Underwater Activities": {
+      "description": "Underwater exploration and marine experiences",
+      "subcategories": [
+        {
+          "name": "Scuba Diving (Certified)",
+          "description": "Diving experiences for certified divers",
+          "search_query_template": "scuba diving tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_license", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Discover Scuba (Beginners)",
+          "description": "Introductory diving experiences for non-certified divers",
+          "search_query_template": "discover scuba diving in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["summer", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Snorkeling Tours",
+          "description": "Guided snorkeling in coral reefs and marine areas",
+          "search_query_template": "snorkeling tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["summer", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["weather_dependent"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Submarine Tours",
+          "description": "Underwater viewing experiences in tourist submarines",
+          "search_query_template": "submarine tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["caribbean", "oceania", "southeast_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["bucket_list", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Shark Cage Diving",
+          "description": "Observing sharks from protective cages underwater",
+          "search_query_template": "shark cage diving in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["sub_saharan_africa", "oceania", "north_america"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Hiking & Trekking": {
+      "description": "Land-based walking and climbing experiences in nature",
+      "subcategories": [
+        {
+          "name": "Guided Day Hikes",
+          "description": "Single-day hiking tours with local guides",
+          "search_query_template": "guided day hikes in {city}",
+          "tags": {
+            "geo_type": ["mountain", "forest", "coastal", "rural", "volcanic"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["off_beaten_path", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Multi-Day Treks",
+          "description": "Overnight trekking expeditions with camping or lodges",
+          "search_query_template": "multi day treks in {city}",
+          "tags": {
+            "geo_type": ["mountain", "forest", "desert", "rural"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "business_travel", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment", "requires_guide"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Mountain Climbing",
+          "description": "Technical climbing experiences on mountain peaks",
+          "search_query_template": "mountain climbing in {city}",
+          "tags": {
+            "geo_type": ["mountain"],
+            "geo_region": ["all"],
+            "season": ["summer"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment", "requires_guide"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list"]
+          }
+        },
+        {
+          "name": "Volcano Hikes",
+          "description": "Guided hikes to volcanic craters and lava fields",
+          "search_query_template": "volcano hiking tours in {city}",
+          "tags": {
+            "geo_type": ["volcanic", "mountain"],
+            "geo_region": ["southeast_asia", "central_america", "oceania", "southern_europe"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_guide"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Nature Walks & Easy Trails",
+          "description": "Gentle walking tours suitable for all fitness levels",
+          "search_query_template": "nature walks easy trails in {city}",
+          "tags": {
+            "geo_type": ["forest", "coastal", "rural", "lakeside"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["quiet_relaxing", "family_friendly_atmosphere"]
+          }
+        }
+      ]
+    },
+
+    "Extreme & Adrenaline Sports": {
+      "description": "High-intensity adventure activities for thrill-seekers",
+      "subcategories": [
+        {
+          "name": "Skydiving & Tandem Jumps",
+          "description": "Freefall experiences with certified instructors",
+          "search_query_template": "skydiving tandem jumps in {city}",
+          "tags": {
+            "geo_type": ["coastal", "rural", "desert"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Bungee Jumping",
+          "description": "Extreme jumping from bridges, towers, or cranes",
+          "search_query_template": "bungee jumping in {city}",
+          "tags": {
+            "geo_type": ["mountain", "urban", "riverside"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Zip-Lining",
+          "description": "Cable-based aerial adventures through forests or canyons",
+          "search_query_template": "zip lining in {city}",
+          "tags": {
+            "geo_type": ["forest", "mountain", "tropical", "rural"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Canyoning & Canyoneering",
+          "description": "Descending through canyons using climbing, rappelling, and swimming",
+          "search_query_template": "canyoning canyoneering in {city}",
+          "tags": {
+            "geo_type": ["mountain", "riverside"],
+            "geo_region": ["all"],
+            "season": ["summer"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment", "requires_guide"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Rock Climbing & Via Ferrata",
+          "description": "Guided climbing on natural rock faces or protected routes",
+          "search_query_template": "rock climbing via ferrata in {city}",
+          "tags": {
+            "geo_type": ["mountain"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment", "requires_guide"],
+            "timing": ["weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "off_beaten_path"]
+          }
+        }
+      ]
+    },
+
+    "Winter Sports": {
+      "description": "Snow and ice-based recreational activities",
+      "subcategories": [
+        {
+          "name": "Skiing (Downhill)",
+          "description": "Alpine skiing on groomed slopes and backcountry",
+          "search_query_template": "skiing downhill in {city}",
+          "tags": {
+            "geo_type": ["mountain"],
+            "geo_region": ["western_europe", "eastern_europe", "northern_europe", "north_america", "east_asia", "oceania"],
+            "season": ["winter"],
+            "season_special": ["ski_season", "christmas_period"],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_equipment"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Snowboarding",
+          "description": "Snowboarding instruction and experiences",
+          "search_query_template": "snowboarding in {city}",
+          "tags": {
+            "geo_type": ["mountain"],
+            "geo_region": ["western_europe", "eastern_europe", "northern_europe", "north_america", "east_asia", "oceania"],
+            "season": ["winter"],
+            "season_special": ["ski_season"],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_equipment"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Cross-Country Skiing & Snowshoeing",
+          "description": "Nordic skiing and snowshoe treks through winter landscapes",
+          "search_query_template": "cross country skiing snowshoeing in {city}",
+          "tags": {
+            "geo_type": ["mountain", "forest"],
+            "geo_region": ["northern_europe", "western_europe", "north_america"],
+            "season": ["winter"],
+            "season_special": [],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_equipment"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["quiet_relaxing", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Dog Sledding & Husky Tours",
+          "description": "Guided dog sled experiences through snowy terrain",
+          "search_query_template": "dog sledding husky tours in {city}",
+          "tags": {
+            "geo_type": ["arctic", "mountain", "forest"],
+            "geo_region": ["northern_europe", "north_america"],
+            "season": ["winter"],
+            "season_special": [],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["bucket_list", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Ice Skating",
+          "description": "Outdoor and indoor ice skating experiences",
+          "search_query_template": "ice skating in {city}",
+          "tags": {
+            "geo_type": ["urban", "mountain"],
+            "geo_region": ["northern_europe", "western_europe", "eastern_europe", "north_america", "east_asia"],
+            "season": ["winter"],
+            "season_special": ["christmas_period"],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["seasonal_only"],
+            "physical": ["low_activity"],
+            "vibe": ["romantic_setting", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Snowmobiling",
+          "description": "Guided snowmobile tours through winter landscapes",
+          "search_query_template": "snowmobiling tours in {city}",
+          "tags": {
+            "geo_type": ["mountain", "arctic", "forest"],
+            "geo_region": ["northern_europe", "north_america"],
+            "season": ["winter"],
+            "season_special": [],
+            "weather_requirement": ["cold_weather_required"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_license"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        }
+      ]
+    },
+
+    "Safari & Wildlife Experiences": {
+      "description": "Wildlife observation and nature-based animal encounters",
+      "subcategories": [
+        {
+          "name": "Big Game Safari Drives",
+          "description": "Guided game drives in wildlife reserves and national parks",
+          "search_query_template": "safari game drives in {city}",
+          "tags": {
+            "geo_type": ["plains", "rural"],
+            "geo_region": ["sub_saharan_africa", "south_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking", "requires_guide"],
+            "timing": ["time_specific"],
+            "physical": ["low_activity"],
+            "vibe": ["bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Whale & Dolphin Watching",
+          "description": "Boat tours for marine mammal observation",
+          "search_query_template": "whale dolphin watching tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "island"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["seasonal_only", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["bucket_list", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Birdwatching Tours",
+          "description": "Guided ornithology tours in diverse habitats",
+          "search_query_template": "birdwatching tours in {city}",
+          "tags": {
+            "geo_type": ["forest", "coastal", "tropical", "rural"],
+            "geo_region": ["all"],
+            "season": ["spring", "autumn", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["quiet_relaxing", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Gorilla & Primate Trekking",
+          "description": "Guided hikes to observe gorillas and other primates in natural habitats",
+          "search_query_template": "gorilla primate trekking in {city}",
+          "tags": {
+            "geo_type": ["forest", "tropical", "mountain"],
+            "geo_region": ["sub_saharan_africa", "southeast_asia", "central_america"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "not_for_seniors"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+            "logistics": ["requires_advance_booking", "requires_guide"],
+            "timing": ["seasonal_only"],
+            "physical": ["physically_demanding"],
+            "vibe": ["bucket_list", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Sea Turtle Conservation Tours",
+          "description": "Guided experiences observing nesting or releasing sea turtles",
+          "search_query_template": "sea turtle conservation tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "tropical"],
+            "geo_region": ["caribbean", "central_america", "southeast_asia", "oceania"],
+            "season": ["summer", "all_season"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["family_young_children", "family_teens", "couple_travel", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["seasonal_only", "nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["bucket_list", "family_friendly_atmosphere"]
+          }
+        }
+      ]
+    },
+
+    "Food & Culinary Experiences": {
+      "description": "Hands-on cooking and food-focused activities",
+      "subcategories": [
+        {
+          "name": "Cooking Classes",
+          "description": "Hands-on instruction in local or international cuisine",
+          "search_query_template": "cooking classes in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Wine Tastings & Tours",
+          "description": "Vineyard visits with wine education and sampling",
+          "search_query_template": "wine tasting tours in {city}",
+          "tags": {
+            "geo_type": ["rural", "mountain"],
+            "geo_region": ["western_europe", "southern_europe", "north_america", "south_america", "oceania"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": ["autumn_foliage"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Brewery & Craft Beer Tours",
+          "description": "Guided tours of breweries with tastings",
+          "search_query_template": "brewery craft beer tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "north_america", "oceania"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Market Tours with Chef",
+          "description": "Guided market visits followed by cooking demonstrations",
+          "search_query_template": "market tours with chef in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Chocolate & Confectionery Workshops",
+          "description": "Hands-on chocolate-making and tasting experiences",
+          "search_query_template": "chocolate workshops in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "central_america", "south_america"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Coffee Plantation Tours",
+          "description": "Farm visits with coffee production demonstrations and tastings",
+          "search_query_template": "coffee plantation tours in {city}",
+          "tags": {
+            "geo_type": ["mountain", "tropical", "rural"],
+            "geo_region": ["central_america", "south_america", "southeast_asia", "sub_saharan_africa"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "off_beaten_path"]
+          }
+        }
+      ]
+    },
+
+    "Workshops & Hands-on Classes": {
+      "description": "Creative and skill-building workshops beyond food",
+      "subcategories": [
+        {
+          "name": "Pottery & Ceramics Classes",
+          "description": "Hands-on pottery wheel and ceramic workshops",
+          "search_query_template": "pottery ceramics classes in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Painting & Art Workshops",
+          "description": "Guided painting classes in various mediums",
+          "search_query_template": "painting art workshops in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy"]
+          }
+        },
+        {
+          "name": "Photography Tours & Workshops",
+          "description": "Guided photo walks with instruction and tips",
+          "search_query_template": "photography tours workshops in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural", "coastal", "mountain"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Traditional Craft Workshops",
+          "description": "Learning local artisan techniques and crafts",
+          "search_query_template": "traditional craft workshops in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Perfume Making Workshops",
+          "description": "Creating custom fragrances with guidance from perfumers",
+          "search_query_template": "perfume making workshops in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting"]
+          }
+        }
+      ]
+    },
+
+    "Performing Arts & Cultural Shows": {
+      "description": "Live performances and cultural entertainment experiences",
+      "subcategories": [
+        {
+          "name": "Flamenco Shows",
+          "description": "Traditional Spanish dance and music performances",
+          "search_query_template": "flamenco shows in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["southern_europe"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "family_teens"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Traditional Dance Shows",
+          "description": "Cultural dance performances specific to the region",
+          "search_query_template": "traditional dance shows in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific", "nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "bucket_list"]
+          }
+        },
+        {
+          "name": "Dinner Shows & Cabaret",
+          "description": "Combined dining and entertainment experiences",
+          "search_query_template": "dinner shows cabaret in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "north_america", "east_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Music Concerts & Live Performances",
+          "description": "Live music events and concert experiences",
+          "search_query_template": "live music concerts in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only", "time_specific"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Opera & Classical Performances",
+          "description": "Opera houses and classical music concerts",
+          "search_query_template": "opera classical performances in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "eastern_europe", "north_america"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["romantic_setting", "bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Wellness & Relaxation Activities": {
+      "description": "Health, spa, and relaxation-focused experiences",
+      "subcategories": [
+        {
+          "name": "Spa Day Packages",
+          "description": "Multi-treatment spa experiences",
+          "search_query_template": "spa day packages in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "mountain"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "solo_trip"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["quiet_relaxing", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Turkish Hammam & Bath Houses",
+          "description": "Traditional bathing and cleansing rituals",
+          "search_query_template": "turkish hammam bath houses in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["middle_east", "southern_europe", "north_africa"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "bucket_list"]
+          }
+        },
+        {
+          "name": "Yoga Classes & Retreats",
+          "description": "Drop-in yoga classes and short retreat experiences",
+          "search_query_template": "yoga classes retreats in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "mountain", "tropical"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "time_specific"],
+            "physical": ["low_activity", "moderate_activity"],
+            "vibe": ["quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Thermal Springs & Hot Baths",
+          "description": "Natural hot spring bathing experiences",
+          "search_query_template": "thermal hot springs in {city}",
+          "tags": {
+            "geo_type": ["mountain", "volcanic", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["quiet_relaxing", "instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "Massage & Body Treatments",
+          "description": "Individual massage and treatment bookings",
+          "search_query_template": "massage body treatments in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["quiet_relaxing"]
+          }
+        }
+      ]
+    },
+
+    "Entertainment & Shows": {
+      "description": "Spectator entertainment and attractions",
+      "subcategories": [
+        {
+          "name": "Magic Shows",
+          "description": "Stage magic and illusion performances",
+          "search_query_template": "magic shows in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Comedy Shows & Stand-Up",
+          "description": "Live comedy performances and stand-up",
+          "search_query_template": "comedy shows stand up in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "north_america", "oceania"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Escape Rooms",
+          "description": "Interactive puzzle-solving experiences",
+          "search_query_template": "escape rooms in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy"]
+          }
+        },
+        {
+          "name": "Immersive Theater Experiences",
+          "description": "Interactive theatrical performances where audiences participate",
+          "search_query_template": "immersive theater experiences in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "north_america", "east_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "Casino Experiences",
+          "description": "Gaming and entertainment at casinos",
+          "search_query_template": "casinos in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["north_america", "east_asia", "western_europe", "caribbean"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only", "available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["party_atmosphere"]
+          }
+        }
+      ]
+    },
+
+    "Nightlife Experiences": {
+      "description": "Evening and late-night social activities",
+      "subcategories": [
+        {
+          "name": "Rooftop Bar Experiences",
+          "description": "Drinking and socializing at elevated venues with views",
+          "search_query_template": "rooftop bars in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["warm_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Jazz Clubs",
+          "description": "Live jazz music venues",
+          "search_query_template": "jazz clubs in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "east_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["romantic_setting", "local_favorite"]
+          }
+        },
+        {
+          "name": "Wine & Cocktail Bars",
+          "description": "Upscale drinking establishments with curated beverage menus",
+          "search_query_template": "wine cocktail bars in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["romantic_setting", "local_favorite"]
+          }
+        },
+        {
+          "name": "Live Music Venues & Concerts",
+          "description": "Small to medium venues hosting bands and musicians",
+          "search_query_template": "live music venues in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Night Market Tours",
+          "description": "Guided or self-guided exploration of evening markets",
+          "search_query_template": "night markets in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["east_asia", "southeast_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        }
+      ]
+    },
+
+    "Sports & Recreation": {
+      "description": "Active sports and recreational activities",
+      "subcategories": [
+        {
+          "name": "Golf Rounds & Lessons",
+          "description": "Golfing at courses and instruction",
+          "search_query_template": "golf courses in {city}",
+          "tags": {
+            "geo_type": ["coastal", "mountain", "urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Tennis & Racquet Sports",
+          "description": "Court sports including tennis, squash, badminton",
+          "search_query_template": "tennis courts in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["physically_demanding"],
+            "vibe": []
+          }
+        },
+        {
+          "name": "Cycling Tours & Bike Rentals",
+          "description": "City and countryside cycling experiences",
+          "search_query_template": "bike tours cycling in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural", "coastal"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Horseback Riding",
+          "description": "Trail rides and equestrian experiences",
+          "search_query_template": "horseback riding in {city}",
+          "tags": {
+            "geo_type": ["rural", "mountain", "coastal", "desert"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children", "not_for_seniors"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["off_beaten_path", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Fishing Tours & Charters",
+          "description": "Sport fishing and angling experiences",
+          "search_query_template": "fishing tours charters in {city}",
+          "tags": {
+            "geo_type": ["coastal", "riverside", "lakeside"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["quiet_relaxing", "off_beaten_path"]
+          }
+        }
+      ]
+    },
+
+    "Photography & Creative Tours": {
+      "description": "Tours and activities focused on visual creativity",
+      "subcategories": [
+        {
+          "name": "Sunrise & Sunset Photography Tours",
+          "description": "Golden hour photo shoots at scenic locations",
+          "search_query_template": "sunrise sunset photography tours in {city}",
+          "tags": {
+            "geo_type": ["coastal", "mountain", "urban", "desert"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["time_specific"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        },
+        {
+          "name": "Wildlife Photography Tours",
+          "description": "Guided experiences capturing animals in natural habitats",
+          "search_query_template": "wildlife photography tours in {city}",
+          "tags": {
+            "geo_type": ["rural", "forest", "plains", "coastal"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking", "requires_equipment"],
+            "timing": ["time_specific", "weather_dependent"],
+            "physical": ["moderate_activity"],
+            "vibe": ["bucket_list", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Urban Photography Walks",
+          "description": "Guided walks focusing on city architecture and street photography",
+          "search_query_template": "urban photography walks in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "local_favorite"]
+          }
+        },
+        {
+          "name": "Film & TV Location Tours",
+          "description": "Visiting filming locations from popular movies and shows",
+          "search_query_template": "film tv location tours in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        }
+      ]
+    },
+
+    "Educational & Learning Experiences": {
+      "description": "Enrichment activities focused on learning and skill development",
+      "subcategories": [
+        {
+          "name": "Language Classes & Lessons",
+          "description": "Short-term language instruction in local language",
+          "search_query_template": "language classes in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Cultural Workshops & Demonstrations",
+          "description": "Learning about local traditions and cultural practices",
+          "search_query_template": "cultural workshops in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Farm & Agricultural Tours",
+          "description": "Educational visits to working farms and plantations",
+          "search_query_template": "farm agricultural tours in {city}",
+          "tags": {
+            "geo_type": ["rural"],
+            "geo_region": ["all"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["family_young_children", "family_teens", "couple_travel", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["family_friendly_atmosphere", "local_favorite", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Science & Technology Tours",
+          "description": "Behind-the-scenes tours of tech companies and research facilities",
+          "search_query_template": "science technology tours in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "east_asia"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": []
+          }
+        },
+        {
+          "name": "Astronomy & Stargazing Tours",
+          "description": "Guided night sky observation experiences",
+          "search_query_template": "stargazing astronomy tours in {city}",
+          "tags": {
+            "geo_type": ["desert", "mountain", "rural"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["nighttime_only", "weather_dependent"],
+            "physical": ["low_activity"],
+            "vibe": ["bucket_list", "romantic_setting", "off_beaten_path"]
+          }
+        }
+      ]
+    }
+  }
+}

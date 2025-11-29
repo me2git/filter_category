@@ -1,0 +1,982 @@
+# Task: Create Filtering Algorithm for Tourism Categories with AI City Inference
+
+## Context
+
+You have a tourism system with three components:
+1. **Category Database** (from Prompt 1): Places, Activities, Dining — each subcategory has requirement tags
+2. **City Database** (from Prompt 2): ~380 cities with characteristic tags
+3. **User Input**: destination, dates, trip_type, budget
+
+Your task: Create a Python filtering algorithm that:
+1. Matches city characteristics against category requirements
+2. **Handles unknown cities** via AI inference when city is not in database
+
+---
+
+## PART 1: INPUT DATA STRUCTURES
+
+### A) User Input (received at query time)
+````python
+user_input = {
+    "destination": {
+        "city": "Prague",
+        "country": "Czech Republic"
+    },
+    "dates": {
+        "start": "2025-12-18",
+        "end": "2025-12-25"
+    },
+    "trip_type": "romantic_couple",  # enum: solo_trip, romantic_couple, couple_travel, family_young_children, family_teens, group_friends, business_travel
+    "budget": "mid_range"  # enum: budget, mid_range, luxury
+}
+````
+
+### B) City Data (from city database)
+````python
+city_data = {
+    "city": "Prague",
+    "country": "Czech Republic",
+    "region": "eastern_europe",
+    "tags": {
+        "geo_type": ["urban", "riverside"],
+        "geo_region": ["eastern_europe"],
+        "climate_type": ["continental"],
+        "weather_characteristics": ["snowy_winters", "extreme_cold_winter"],
+        "seasonal_features": ["christmas_period", "autumn_foliage", "spring_festivals"],
+        "infrastructure": ["developed"],
+        "tourism_characteristics": ["historical_city", "cultural_hub", "romantic_destination", "foodie_destination", "backpacker_friendly"],
+        "special_features": ["unesco_sites", "nightlife_hub"]
+      }
+}
+````
+
+### C) Category Data (from category database)
+````python
+category = {
+    "name": "Surfing",
+    "parent_category": "Water Sports",
+    "list": "activities",
+    "tags": {
+        "geo_type": ["coastal", "island"],
+        "geo_region": ["oceania", "southeast_asia", "western_europe", "north_america", "south_america", "caribbean"],
+        "season": ["summer", "all_season"],
+        "season_special": [],
+        "weather_requirement": ["warm_weather_required"],
+        "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+        "trip_exclude": ["family_young_children", "business_travel"],
+        "age_appropriate": ["teens_and_up"],
+        "budget_level": ["budget", "mid_range", "luxury"],
+        "budget_exclude": [],
+        "logistics": ["requires_equipment"],
+        "timing": ["weather_dependent"],
+        "physical": ["physically_demanding"],
+        "vibe": ["instagram_worthy", "bucket_list"]
+    }
+}
+````
+
+---
+
+## PART 2: AI CITY INFERENCE SYSTEM
+
+### 2.1 City Lookup with AI Fallback
+````python
+import json
+from typing import Optional
+import anthropic  # or your LLM client
+
+# Load city database
+with open('cities.json', 'r') as f:
+    CITY_DATABASE = {
+        f"{city['city'].lower()}_{city['country'].lower()}": city 
+        for city in json.load(f)['cities']
+    }
+
+def get_city_data(city: str, country: str) -> dict:
+    """
+    Get city tags from database, or use AI inference for unknown cities.
+    """
+    # Normalize for lookup
+    key = f"{city.lower()}_{country.lower()}"
+    
+    # Try exact match
+    if key in CITY_DATABASE:
+        return CITY_DATABASE[key]
+    
+    # Try fuzzy match (city name only, for common variations)
+    for db_key, db_city in CITY_DATABASE.items():
+        if city.lower() in db_key or db_key.split('_')[0] in city.lower():
+            return db_city
+    
+    # City not in database — use AI inference
+    print(f"City '{city}, {country}' not in database. Using AI inference...")
+    return infer_city_tags_with_ai(city, country)
+````
+
+### 2.2 AI Inference Prompt for Unknown Cities
+````python
+CITY_INFERENCE_PROMPT = """
+You are a travel data expert. Generate tourism tags for a city that will be used for filtering travel categories.
+
+## CITY TO ANALYZE
+City: {city}
+Country: {country}
+
+## STRICT TAG VOCABULARY
+
+You MUST use ONLY these exact tag values. Do not invent new values.
+
+### geo_type (select ALL that apply):
+urban, rural, coastal, desert, mountain, forest, island, tropical, lakeside, riverside, volcanic, plains, limestone, arctic
+
+### geo_region (select ONE):
+east_asia, southeast_asia, south_asia, western_europe, eastern_europe, northern_europe, southern_europe, middle_east, north_africa, sub_saharan_africa, north_america, central_america, south_america, caribbean, oceania, pacific_islands, central_asia
+
+### climate_type (select ONE):
+tropical, subtropical, mediterranean, continental, oceanic, desert, semi_arid, subarctic, arctic, highland, monsoon
+
+### weather_characteristics (select ALL that apply):
+sunny_most_year, rainy_season, snowy_winters, mild_year_round, extreme_heat_summer, extreme_cold_winter, humid, dry, windy, unpredictable
+
+### seasonal_features (select ALL that apply):
+cherry_blossom, autumn_foliage, christmas_period, easter, ramadan, ski_season, summer_holidays, halloween, lunar_new_year, monsoon_avoid, northern_lights, winter_festivals, tulip_season, spring_festivals, beach_season, midnight_sun, summer_festivals, outdoor_concerts, harvest_festivals, wine_harvest, oktoberfest, ice_hotels, snowy_landscapes
+
+### infrastructure (select ONE):
+developed, developing, remote, adventure_infrastructure
+
+### tourism_characteristics (select ALL that apply):
+beach_destination, ski_resort, cultural_hub, historical_city, party_destination, foodie_destination, shopping_destination, adventure_base, wellness_destination, business_hub, romantic_destination, family_destination, backpacker_friendly, luxury_destination, spiritual_center, art_capital, music_city, tech_hub, university_town
+
+### special_features (select ALL that apply):
+unesco_sites, theme_parks, casinos, cannabis_legal, lgbtq_friendly, nightlife_hub, wine_region, dive_sites, surf_spots, safari_access, ancient_ruins, royal_heritage, religious_significance, film_location, cruise_port, hot_springs
+
+## INSTRUCTIONS
+
+1. Research or use your knowledge about {city}, {country}
+2. Select appropriate tags from EACH category above
+3. Be accurate — only select tags that truly apply
+4. Consider:
+   - Physical geography (coastal? mountain? island?)
+   - Climate and weather patterns
+   - What the city is famous for tourism-wise
+   - Seasonal events and features
+   - Infrastructure level
+   - Special attractions
+
+## OUTPUT FORMAT
+
+Return ONLY valid JSON, no other text:
+```json
+{{
+  "city": "{city}",
+  "country": "{country}",
+  "region": "<geo_region value>",
+  "tags": {{
+    "geo_type": ["<value1>", "<value2>"],
+    "geo_region": ["<single value>"],
+    "climate_type": ["<single value>"],
+    "weather_characteristics": ["<value1>", "<value2>"],
+    "seasonal_features": ["<value1>", "<value2>"],
+    "infrastructure": ["<single value>"],
+    "tourism_characteristics": ["<value1>", "<value2>"],
+    "special_features": ["<value1>", "<value2>"]
+  }},
+  "confidence": "<high|medium|low>",
+  "notes": "<brief note if low confidence>"
+}}
+```
+"""
+
+def infer_city_tags_with_ai(city: str, country: str) -> dict:
+    """
+    Use LLM to infer city tags for cities not in database.
+    """
+    client = anthropic.Anthropic()
+    
+    prompt = CITY_INFERENCE_PROMPT.format(city=city, country=country)
+    
+    try:
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1000,
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+        
+        # Parse JSON from response
+        response_text = response.content[0].text
+        
+        # Clean up response (remove markdown code blocks if present)
+        if "```json" in response_text:
+            response_text = response_text.split("```json")[1].split("```")[0]
+        elif "```" in response_text:
+            response_text = response_text.split("```")[1].split("```")[0]
+        
+        city_data = json.loads(response_text.strip())
+        
+        # Log confidence level
+        confidence = city_data.get("confidence", "unknown")
+        if confidence == "low":
+            print(f"Warning: Low confidence inference for {city}, {country}")
+            print(f"Notes: {city_data.get('notes', 'N/A')}")
+        
+        # Cache the result for future use (optional)
+        cache_inferred_city(city, country, city_data)
+        
+        return city_data
+        
+    except Exception as e:
+        print(f"AI inference failed for {city}, {country}: {e}")
+        # Fallback to minimal safe defaults
+        return get_fallback_city_data(city, country)
+
+
+def cache_inferred_city(city: str, country: str, city_data: dict):
+    """
+    Optionally cache inferred city data to avoid repeated API calls.
+    """
+    # Save to a separate cache file
+    cache_file = 'inferred_cities_cache.json'
+    try:
+        with open(cache_file, 'r') as f:
+            cache = json.load(f)
+    except FileNotFoundError:
+        cache = {}
+    
+    key = f"{city.lower()}_{country.lower()}"
+    cache[key] = city_data
+    
+    with open(cache_file, 'w') as f:
+        json.dump(cache, f, indent=2)
+
+
+def get_fallback_city_data(city: str, country: str) -> dict:
+    """
+    Fallback when AI inference fails — use minimal safe defaults.
+    """
+    return {
+        "city": city,
+        "country": country,
+        "region": "unknown",
+        "tags": {
+            "geo_type": ["urban"],  # Safe default
+            "geo_region": [],  # Will skip geo_region filtering
+            "climate_type": [],
+            "weather_characteristics": [],
+            "seasonal_features": [],
+            "infrastructure": ["developed"],  # Safe default
+            "tourism_characteristics": ["cultural_hub"],  # Safe default
+            "special_features": []
+        },
+        "confidence": "fallback",
+        "notes": "AI inference failed, using safe defaults"
+    }
+````
+
+### 2.3 Country-Based Fallback (Optional Enhancement)
+````python
+# Optional: Country database for additional fallback
+COUNTRY_DEFAULTS = {
+    "japan": {
+        "geo_region": ["east_asia"],
+        "climate_type": ["continental"],
+        "seasonal_features": ["cherry_blossom", "autumn_foliage"],
+        "infrastructure": ["developed"]
+    },
+    "thailand": {
+        "geo_region": ["southeast_asia"],
+        "climate_type": ["tropical"],
+        "seasonal_features": ["monsoon_avoid", "beach_season"],
+        "infrastructure": ["developed"]
+    },
+    "germany": {
+        "geo_region": ["western_europe"],
+        "climate_type": ["continental"],
+        "seasonal_features": ["christmas_period", "oktoberfest"],
+        "infrastructure": ["developed"]
+    },
+    # Add more countries as needed...
+}
+
+def enhance_with_country_defaults(city_data: dict, country: str) -> dict:
+    """
+    Fill in missing tags from country defaults.
+    """
+    country_key = country.lower()
+    if country_key in COUNTRY_DEFAULTS:
+        defaults = COUNTRY_DEFAULTS[country_key]
+        for tag_type, values in defaults.items():
+            if tag_type in city_data["tags"] and not city_data["tags"][tag_type]:
+                city_data["tags"][tag_type] = values
+    return city_data
+````
+
+---
+
+## PART 3: DATE CONTEXT DERIVATION
+````python
+from datetime import datetime, date
+from typing import List
+
+def derive_date_context(start_date: str, end_date: str) -> dict:
+    """
+    From dates derive season, special periods, and other temporal context.
+    """
+    start = datetime.strptime(start_date, "%Y-%m-%d").date()
+    end = datetime.strptime(end_date, "%Y-%m-%d").date()
+    
+    # Get months covered
+    months = set()
+    current = start
+    while current <= end:
+        months.add(current.month)
+        # Move to next month
+        if current.month == 12:
+            current = current.replace(year=current.year + 1, month=1, day=1)
+        else:
+            current = current.replace(month=current.month + 1, day=1)
+    
+    # Determine season (Northern Hemisphere default)
+    season = get_season_from_months(months)
+    
+    # Detect special periods
+    special_periods = detect_special_periods(start, end)
+    
+    return {
+        "season": season,
+        "special_periods": special_periods,
+        "months": list(months),
+        "start_date": start,
+        "end_date": end
+    }
+
+
+def get_season_from_months(months: set) -> str:
+    """
+    Determine primary season from months (Northern Hemisphere).
+    """
+    winter_months = {12, 1, 2}
+    spring_months = {3, 4, 5}
+    summer_months = {6, 7, 8}
+    autumn_months = {9, 10, 11}
+    
+    # Count overlap with each season
+    scores = {
+        "winter": len(months & winter_months),
+        "spring": len(months & spring_months),
+        "summer": len(months & summer_months),
+        "autumn": len(months & autumn_months)
+    }
+    
+    return max(scores, key=scores.get)
+
+
+def detect_special_periods(start: date, end: date) -> List[str]:
+    """
+    Detect special holiday/event periods within date range.
+    """
+    special = []
+    year = start.year
+    
+    # Define special periods (month, day_start, day_end, tag)
+    periods = [
+        # Christmas period: Dec 15 - Jan 5
+        ((12, 15), (1, 5), "christmas_period"),
+        # Easter: roughly late March to mid April (simplified)
+        ((3, 25), (4, 20), "easter"),
+        # Summer holidays: June 15 - Aug 31
+        ((6, 15), (8, 31), "summer_holidays"),
+        # Oktoberfest: mid Sep to early Oct
+        ((9, 16), (10, 7), "oktoberfest"),
+        # Halloween: Oct 25 - Nov 2
+        ((10, 25), (11, 2), "halloween"),
+        # Cherry blossom (Japan): late March to early May
+        ((3, 20), (5, 10), "cherry_blossom"),
+        # Autumn foliage: Oct - Nov
+        ((10, 1), (11, 30), "autumn_foliage"),
+        # Ski season: Dec - March
+        ((12, 1), (3, 31), "ski_season"),
+        # Lunar New Year: late Jan to mid Feb (varies)
+        ((1, 20), (2, 20), "lunar_new_year"),
+    ]
+    
+    for (start_m, start_d), (end_m, end_d), tag in periods:
+        # Create period dates
+        try:
+            if start_m > end_m:  # Crosses year boundary (e.g., Christmas)
+                period_start = date(year, start_m, start_d)
+                period_end = date(year + 1, end_m, end_d)
+            else:
+                period_start = date(year, start_m, start_d)
+                period_end = date(year, end_m, end_d)
+            
+            # Check overlap
+            if start <= period_end and end >= period_start:
+                special.append(tag)
+        except ValueError:
+            continue  # Skip invalid dates
+    
+    return special
+
+
+def get_season_for_hemisphere(season: str, city_data: dict) -> str:
+    """
+    Invert season for Southern Hemisphere cities.
+    """
+    southern_regions = ["oceania", "south_america", "sub_saharan_africa", "pacific_islands"]
+    
+    geo_region = city_data.get("tags", {}).get("geo_region", [])
+    if not geo_region:
+        geo_region = [city_data.get("region", "")]
+    
+    is_southern = any(region in southern_regions for region in geo_region)
+    
+    if is_southern:
+        season_map = {
+            "winter": "summer",
+            "summer": "winter",
+            "spring": "autumn",
+            "autumn": "spring"
+        }
+        return season_map.get(season, season)
+    
+    return season
+````
+
+---
+
+## PART 4: FILTERING ALGORITHM
+
+### 4.1 Hard Filters (Exclude completely)
+````python
+def apply_hard_filters(category: dict, city: dict, user_input: dict, date_context: dict) -> bool:
+    """
+    Returns True if category should be EXCLUDED.
+    """
+    city_tags = city.get("tags", {})
+    category_tags = category.get("tags", {})
+    
+    # 1. GEO_TYPE MISMATCH
+    # Category requires certain geography that city doesn't have
+    required_geo_types = category_tags.get("geo_type", [])
+    city_geo_types = city_tags.get("geo_type", [])
+    
+    if required_geo_types and city_geo_types:
+        if not any(gt in city_geo_types for gt in required_geo_types):
+            return True  # EXCLUDE: geo mismatch
+    
+    # 2. GEO_REGION MISMATCH (only if category is region-specific)
+    required_geo_regions = category_tags.get("geo_region", [])
+    city_geo_regions = city_tags.get("geo_region", [])
+    
+    if required_geo_regions and "all" not in required_geo_regions:
+        if city_geo_regions:
+            if not any(gr in city_geo_regions for gr in required_geo_regions):
+                return True  # EXCLUDE: region mismatch
+    
+    # 3. TRIP_TYPE EXCLUSION
+    trip_exclude = category_tags.get("trip_exclude", [])
+    if user_input["trip_type"] in trip_exclude:
+        return True  # EXCLUDE: trip type excluded
+    
+    # 4. BUDGET EXCLUSION
+    budget_exclude = category_tags.get("budget_exclude", [])
+    budget_mapping = {
+        "budget": "not_for_budget",
+        "mid_range": "not_for_mid_range",
+        "luxury": "not_for_luxury"
+    }
+    if budget_mapping.get(user_input["budget"]) in budget_exclude:
+        return True  # EXCLUDE: budget excluded
+    
+    # 5. BUDGET LEVEL MISMATCH
+    budget_levels = category_tags.get("budget_level", [])
+    if budget_levels and user_input["budget"] not in budget_levels:
+        if "varies_widely" not in budget_levels:
+            return True  # EXCLUDE: budget level not available
+    
+    # 6. SEASONAL EXCLUSION
+    timing = category_tags.get("timing", [])
+    if "seasonal_only" in timing:
+        category_seasons = category_tags.get("season", [])
+        adjusted_season = get_season_for_hemisphere(date_context["season"], city)
+        if adjusted_season not in category_seasons:
+            if "all_season" not in category_seasons:
+                return True  # EXCLUDE: wrong season
+    
+    # 7. WEATHER REQUIREMENT MISMATCH
+    weather_req = category_tags.get("weather_requirement", [])
+    adjusted_season = get_season_for_hemisphere(date_context["season"], city)
+    city_climate = city_tags.get("climate_type", [])
+    
+    if "warm_weather_required" in weather_req:
+        if adjusted_season == "winter" and "tropical" not in city_climate:
+            return True  # EXCLUDE: needs warm weather
+    
+    if "cold_weather_required" in weather_req:
+        if adjusted_season == "summer" and "arctic" not in city_climate and "subarctic" not in city_climate:
+            return True  # EXCLUDE: needs cold weather
+    
+    # 8. SPECIAL PERIOD REQUIREMENT
+    season_special = category_tags.get("season_special", [])
+    if season_special and "seasonal_only" in timing:
+        available_periods = date_context["special_periods"] + city_tags.get("seasonal_features", [])
+        if not any(sp in available_periods for sp in season_special):
+            return True  # EXCLUDE: special period required but not available
+    
+    return False  # INCLUDE: passed all hard filters
+````
+
+### 4.2 Soft Filters (Scoring)
+````python
+# Configurable scoring weights
+SCORING_WEIGHTS = {
+    "trip_ideal_match": 15,
+    "season_match": 10,
+    "special_period_match": 10,
+    "all_season_bonus": 5,
+    "budget_match": 5,
+    "vibe_tourism_match": 5,
+    "special_feature_match": 8,
+    "accessibility_bonus": 5,
+    "family_friendly_bonus": 5,
+    "infrastructure_luxury_bonus": 3
+}
+
+def calculate_relevance_score(category: dict, city: dict, user_input: dict, date_context: dict) -> int:
+    """
+    Returns relevance score (higher = more relevant).
+    """
+    score = 0
+    city_tags = city.get("tags", {})
+    category_tags = category.get("tags", {})
+    
+    # --- TRIP TYPE MATCHING ---
+    trip_ideal = category_tags.get("trip_ideal", [])
+    if user_input["trip_type"] in trip_ideal:
+        score += SCORING_WEIGHTS["trip_ideal_match"]
+    
+    # --- BUDGET MATCHING ---
+    budget_levels = category_tags.get("budget_level", [])
+    if user_input["budget"] in budget_levels:
+        score += SCORING_WEIGHTS["budget_match"]
+    
+    # --- SEASON MATCHING ---
+    adjusted_season = get_season_for_hemisphere(date_context["season"], city)
+    category_seasons = category_tags.get("season", [])
+    
+    if adjusted_season in category_seasons:
+        score += SCORING_WEIGHTS["season_match"]
+    if "all_season" in category_seasons:
+        score += SCORING_WEIGHTS["all_season_bonus"]
+    
+    # --- SPECIAL PERIOD BONUS ---
+    season_special = category_tags.get("season_special", [])
+    if season_special:
+        matching_periods = set(season_special) & set(date_context["special_periods"])
+        score += len(matching_periods) * SCORING_WEIGHTS["special_period_match"]
+    
+    # --- CITY TOURISM CHARACTERISTICS MATCHING ---
+    category_vibes = set(category_tags.get("vibe", []))
+    city_tourism = set(city_tags.get("tourism_characteristics", []))
+    
+    vibe_to_tourism = {
+        "romantic_setting": "romantic_destination",
+        "family_friendly_atmosphere": "family_destination",
+        "party_atmosphere": "party_destination",
+        "bucket_list": "cultural_hub",
+        "local_favorite": "foodie_destination",
+        "quiet_relaxing": "wellness_destination",
+        "off_beaten_path": "backpacker_friendly"
+    }
+    
+    for vibe, tourism in vibe_to_tourism.items():
+        if vibe in category_vibes and tourism in city_tourism:
+            score += SCORING_WEIGHTS["vibe_tourism_match"]
+    
+    # --- SPECIAL FEATURES MATCHING ---
+    city_features = set(city_tags.get("special_features", []))
+    parent_category = category.get("parent_category", "")
+    category_name = category.get("name", "")
+    
+    feature_category_map = {
+        "surf_spots": ["Water Sports", "Surfing"],
+        "dive_sites": ["Water Sports", "Diving", "Scuba"],
+        "unesco_sites": ["Heritage", "Historical", "Cultural"],
+        "nightlife_hub": ["Nightlife"],
+        "wine_region": ["Wine", "Vineyard"],
+        "ski_season": ["Winter Sports", "Skiing"],
+        "theme_parks": ["Theme Parks", "Family Entertainment"],
+        "safari_access": ["Safari", "Wildlife"]
+    }
+    
+    for feature, keywords in feature_category_map.items():
+        if feature in city_features:
+            if any(kw in parent_category or kw in category_name for kw in keywords):
+                score += SCORING_WEIGHTS["special_feature_match"]
+    
+    # --- INFRASTRUCTURE BONUS ---
+    if user_input["budget"] == "luxury":
+        if "developed" in city_tags.get("infrastructure", []):
+            if "luxury" in budget_levels:
+                score += SCORING_WEIGHTS["infrastructure_luxury_bonus"]
+    
+    # --- FAMILY ACCESSIBILITY BONUS ---
+    if user_input["trip_type"] in ["family_young_children", "family_teens"]:
+        physical = category_tags.get("physical", [])
+        age_appropriate = category_tags.get("age_appropriate", [])
+        
+        if "accessibility_friendly" in physical or "wheelchair_accessible" in physical:
+            score += SCORING_WEIGHTS["accessibility_bonus"]
+        if "all_ages" in age_appropriate or "family_oriented" in age_appropriate:
+            score += SCORING_WEIGHTS["family_friendly_bonus"]
+    
+    return score
+````
+
+### 4.3 Main Filtering Function
+````python
+def filter_categories(
+    categories: list,
+    city_name: str,
+    country: str,
+    user_input: dict
+) -> dict:
+    """
+    Main function: filter and rank all categories for a user query.
+    
+    Returns structured result with places, activities, dining.
+    """
+    
+    # Step 0: Get city data (from DB or AI inference)
+    city = get_city_data(city_name, country)
+    
+    # Log if city was inferred
+    if city.get("confidence") in ["medium", "low", "fallback"]:
+        print(f"Note: City '{city_name}' was inferred via AI (confidence: {city.get('confidence')})")
+    
+    # Derive date context
+    date_context = derive_date_context(
+        user_input["dates"]["start"],
+        user_input["dates"]["end"]
+    )
+    
+    results = {
+        "city_info": {
+            "city": city_name,
+            "country": country,
+            "from_database": city.get("confidence") is None,
+            "inference_confidence": city.get("confidence"),
+            "city_tags": city.get("tags", {})
+        },
+        "date_context": {
+            "season": date_context["season"],
+            "adjusted_season": get_season_for_hemisphere(date_context["season"], city),
+            "special_periods": date_context["special_periods"]
+        },
+        "places": [],
+        "activities": [],
+        "dining": {
+            "cuisines": [],
+            "formats": [],
+            "dietary": []
+        },
+        "excluded_count": 0,
+        "excluded_examples": []
+    }
+    
+    excluded_count = 0
+    excluded_examples = []
+    
+    for category in categories:
+        # Step 1: Hard filter
+        if apply_hard_filters(category, city, user_input, date_context):
+            excluded_count += 1
+            if len(excluded_examples) < 5:  # Keep only first 5 examples
+                excluded_examples.append({
+                    "name": category["name"],
+                    "parent": category.get("parent_category", ""),
+                    "reason": get_exclusion_reason(category, city, user_input, date_context)
+                })
+            continue
+        
+        # Step 2: Calculate score
+        score = calculate_relevance_score(category, city, user_input, date_context)
+        
+        # Step 3: Add to appropriate list
+        category_result = {
+            "name": category["name"],
+            "parent_category": category.get("parent_category", ""),
+            "relevance_score": score,
+            "search_query_template": category.get("search_query_template", f"{category['name']} in {{city}}")
+        }
+        
+        list_type = category.get("list", "")
+        if list_type == "places":
+            results["places"].append(category_result)
+        elif list_type == "activities":
+            results["activities"].append(category_result)
+        elif list_type == "dining_cuisines":
+            results["dining"]["cuisines"].append(category_result)
+        elif list_type == "dining_formats":
+            results["dining"]["formats"].append(category_result)
+        elif list_type == "dining_dietary":
+            results["dining"]["dietary"].append(category_result)
+    
+    # Step 4: Sort by relevance score (descending)
+    results["places"].sort(key=lambda x: x["relevance_score"], reverse=True)
+    results["activities"].sort(key=lambda x: x["relevance_score"], reverse=True)
+    results["dining"]["cuisines"].sort(key=lambda x: x["relevance_score"], reverse=True)
+    results["dining"]["formats"].sort(key=lambda x: x["relevance_score"], reverse=True)
+    results["dining"]["dietary"].sort(key=lambda x: x["relevance_score"], reverse=True)
+    
+    results["excluded_count"] = excluded_count
+    results["excluded_examples"] = excluded_examples
+    
+    # Step 5: Apply fallback if any list is empty
+    results = apply_fallback_if_empty(results, categories)
+    
+    return results
+
+
+def get_exclusion_reason(category: dict, city: dict, user_input: dict, date_context: dict) -> str:
+    """
+    Determine why a category was excluded (for debugging/logging).
+    """
+    city_tags = city.get("tags", {})
+    category_tags = category.get("tags", {})
+    
+    # Check each exclusion rule
+    required_geo_types = category_tags.get("geo_type", [])
+    city_geo_types = city_tags.get("geo_type", [])
+    if required_geo_types and city_geo_types:
+        if not any(gt in city_geo_types for gt in required_geo_types):
+            return f"geo_type mismatch: requires {required_geo_types}, city has {city_geo_types}"
+    
+    if user_input["trip_type"] in category_tags.get("trip_exclude", []):
+        return f"trip_type '{user_input['trip_type']}' is excluded"
+    
+    budget_exclude = category_tags.get("budget_exclude", [])
+    budget_mapping = {"budget": "not_for_budget", "mid_range": "not_for_mid_range", "luxury": "not_for_luxury"}
+    if budget_mapping.get(user_input["budget"]) in budget_exclude:
+        return f"budget '{user_input['budget']}' is excluded"
+    
+    budget_levels = category_tags.get("budget_level", [])
+    if budget_levels and user_input["budget"] not in budget_levels:
+        return f"budget_level mismatch: requires {budget_levels}"
+    
+    return "unknown reason"
+
+
+def apply_fallback_if_empty(results: dict, all_categories: list) -> dict:
+    """
+    If a category list is empty after filtering, return generic categories.
+    """
+    for list_type in ["places", "activities"]:
+        if not results[list_type]:
+            # Find all-season, geo-agnostic categories
+            generic = [
+                {
+                    "name": c["name"],
+                    "parent_category": c.get("parent_category", ""),
+                    "relevance_score": 0,
+                    "search_query_template": c.get("search_query_template", ""),
+                    "is_fallback": True
+                }
+                for c in all_categories
+                if c.get("list") == list_type
+                and "all_season" in c.get("tags", {}).get("season", [])
+                and not c.get("tags", {}).get("geo_type", [])  # No geo requirements
+            ]
+            results[list_type] = generic[:10]
+            if generic:
+                print(f"Warning: No {list_type} matched filters. Using {len(generic[:10])} generic fallbacks.")
+    
+    return results
+````
+
+---
+
+## PART 5: USAGE EXAMPLE
+````python
+# Load categories from database
+with open('categories.json', 'r') as f:
+    categories_data = json.load(f)
+
+# Flatten categories into list
+all_categories = []
+for list_type in ["places", "activities"]:
+    for parent_name, parent_data in categories_data.get(list_type, {}).items():
+        for subcat in parent_data.get("subcategories", []):
+            subcat["list"] = list_type
+            subcat["parent_category"] = parent_name
+            all_categories.append(subcat)
+
+# Add dining categories
+for cuisine_type, cuisine_data in categories_data.get("dining", {}).get("cuisines", {}).items():
+    for subcat in cuisine_data.get("subcategories", []):
+        subcat["list"] = "dining_cuisines"
+        subcat["parent_category"] = cuisine_type
+        all_categories.append(subcat)
+
+for subcat in categories_data.get("dining", {}).get("formats", {}).get("subcategories", []):
+    subcat["list"] = "dining_formats"
+    all_categories.append(subcat)
+
+for subcat in categories_data.get("dining", {}).get("dietary", {}).get("subcategories", []):
+    subcat["list"] = "dining_dietary"
+    all_categories.append(subcat)
+
+
+# Example: Known city (Prague)
+user_input_prague = {
+    "destination": {"city": "Prague", "country": "Czech Republic"},
+    "dates": {"start": "2025-12-18", "end": "2025-12-25"},
+    "trip_type": "romantic_couple",
+    "budget": "mid_range"
+}
+
+results_prague = filter_categories(
+    all_categories,
+    user_input_prague["destination"]["city"],
+    user_input_prague["destination"]["country"],
+    user_input_prague
+)
+
+print("=== Prague Results ===")
+print(f"City from database: {results_prague['city_info']['from_database']}")
+print(f"Top 5 Places: {[p['name'] for p in results_prague['places'][:5]]}")
+print(f"Top 5 Activities: {[a['name'] for a in results_prague['activities'][:5]]}")
+
+
+# Example: Unknown city (Plovdiv, Bulgaria — not in 380 city database)
+user_input_plovdiv = {
+    "destination": {"city": "Plovdiv", "country": "Bulgaria"},
+    "dates": {"start": "2025-06-10", "end": "2025-06-17"},
+    "trip_type": "couple_travel",
+    "budget": "budget"
+}
+
+results_plovdiv = filter_categories(
+    all_categories,
+    user_input_plovdiv["destination"]["city"],
+    user_input_plovdiv["destination"]["country"],
+    user_input_plovdiv
+)
+
+print("\n=== Plovdiv Results ===")
+print(f"City from database: {results_plovdiv['city_info']['from_database']}")
+print(f"Inference confidence: {results_plovdiv['city_info']['inference_confidence']}")
+print(f"Inferred tags: {results_plovdiv['city_info']['city_tags']}")
+print(f"Top 5 Places: {[p['name'] for p in results_plovdiv['places'][:5]]}")
+print(f"Top 5 Activities: {[a['name'] for a in results_plovdiv['activities'][:5]]}")
+````
+
+---
+
+## PART 6: OUTPUT EXAMPLE
+
+### Known City (Prague)
+````json
+{
+  "city_info": {
+    "city": "Prague",
+    "country": "Czech Republic",
+    "from_database": true,
+    "inference_confidence": null,
+    "city_tags": {
+      "geo_type": ["urban", "riverside"],
+      "geo_region": ["eastern_europe"],
+      "climate_type": ["continental"],
+      "tourism_characteristics": ["historical_city", "cultural_hub", "romantic_destination"]
+    }
+  },
+  "date_context": {
+    "season": "winter",
+    "adjusted_season": "winter",
+    "special_periods": ["christmas_period"]
+  },
+  "places": [
+    {"name": "Christmas Markets", "parent_category": "Seasonal Attractions", "relevance_score": 35},
+    {"name": "Historical Old Town", "parent_category": "Cultural & Historical", "relevance_score": 28},
+    {"name": "Castles & Palaces", "parent_category": "Cultural & Historical", "relevance_score": 25}
+  ],
+  "activities": [
+    {"name": "Classical Music Concerts", "parent_category": "Arts & Entertainment", "relevance_score": 30},
+    {"name": "Wine Tasting", "parent_category": "Food & Drink Experiences", "relevance_score": 25}
+  ],
+  "excluded_count": 47,
+  "excluded_examples": [
+    {"name": "Surfing", "parent": "Water Sports", "reason": "geo_type mismatch: requires ['coastal', 'island'], city has ['urban', 'riverside']"},
+    {"name": "Water Parks", "parent": "Family Entertainment", "reason": "trip_type 'romantic_couple' is excluded"}
+  ]
+}
+````
+
+### Unknown City (Plovdiv — AI Inferred)
+````json
+{
+  "city_info": {
+    "city": "Plovdiv",
+    "country": "Bulgaria",
+    "from_database": false,
+    "inference_confidence": "high",
+    "city_tags": {
+      "geo_type": ["urban", "riverside"],
+      "geo_region": ["eastern_europe"],
+      "climate_type": ["continental"],
+      "weather_characteristics": ["snowy_winters", "extreme_heat_summer"],
+      "seasonal_features": ["summer_festivals", "autumn_foliage"],
+      "infrastructure": ["developed"],
+      "tourism_characteristics": ["historical_city", "cultural_hub", "backpacker_friendly", "foodie_destination"],
+      "special_features": ["unesco_sites", "ancient_ruins"]
+    }
+  },
+  "date_context": {
+    "season": "summer",
+    "adjusted_season": "summer",
+    "special_periods": ["summer_holidays"]
+  },
+  "places": [
+    {"name": "Ancient Ruins & Archaeological Sites", "parent_category": "Cultural & Historical", "relevance_score": 28},
+    {"name": "UNESCO World Heritage Sites", "parent_category": "Cultural & Historical", "relevance_score": 25},
+    {"name": "Old Town & Historic Districts", "parent_category": "Urban Exploration", "relevance_score": 22}
+  ],
+  "activities": [
+    {"name": "Walking Tours", "parent_category": "Tours & Guides", "relevance_score": 20},
+    {"name": "Food Tours", "parent_category": "Food & Drink Experiences", "relevance_score": 18}
+  ],
+  "excluded_count": 35,
+  "excluded_examples": [
+    {"name": "Surfing", "parent": "Water Sports", "reason": "geo_type mismatch: requires ['coastal', 'island'], city has ['urban', 'riverside']"}
+  ]
+}
+````
+
+---
+
+## PART 7: REQUIREMENTS SUMMARY
+
+1. **Create all functions** as specified above
+
+2. **Handle both known and unknown cities** seamlessly
+
+3. **Cache AI-inferred cities** to avoid repeated API calls
+
+4. **Provide confidence levels** for inferred cities
+
+5. **Include fallback logic** when AI fails
+
+6. **Write unit tests** for:
+   - Known city lookup
+   - Unknown city AI inference
+   - Season calculation and hemisphere adjustment
+   - Hard filter exclusions
+   - Score calculation
+   - Fallback scenarios
+
+7. **Optimize for performance**:
+   - Cache city lookups
+   - Pre-index categories by list type
+   - Batch API calls if multiple unknown cities

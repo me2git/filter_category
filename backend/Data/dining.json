@@ -1,0 +1,1944 @@
+{
+  "dining": {
+    "cuisines": {
+      "East Asian": {
+        "description": "Cuisines from China, Japan, Korea, Taiwan, and Mongolia",
+        "subcategories": [
+          {
+            "name": "Japanese",
+            "description": "Traditional and modern Japanese cuisine including sushi, ramen, tempura",
+            "search_query_template": "Japanese restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["east_asia", "north_america", "western_europe", "oceania", "southeast_asia"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["instagram_worthy", "local_favorite", "bucket_list"]
+            }
+          },
+          {
+            "name": "Sushi & Sashimi",
+            "description": "Specialized raw fish cuisine and omakase experiences",
+            "search_query_template": "sushi restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["east_asia", "north_america", "western_europe", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "group_friends", "business_travel"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["teens_and_up"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": ["not_for_budget"],
+              "logistics": ["requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+            }
+          },
+          {
+            "name": "Korean",
+            "description": "Korean BBQ, kimchi, bibimbap, and traditional Korean dishes",
+            "search_query_template": "Korean restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["east_asia", "north_america", "western_europe", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["instagram_worthy", "local_favorite", "family_friendly_atmosphere"]
+            }
+          },
+          {
+            "name": "Chinese - Cantonese",
+            "description": "Southern Chinese cuisine including dim sum, roasted meats, seafood",
+            "search_query_template": "Cantonese restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["east_asia", "southeast_asia", "north_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          },
+          {
+            "name": "Chinese - Sichuan",
+            "description": "Spicy western Chinese cuisine with numbing peppercorns",
+            "search_query_template": "Sichuan restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["east_asia", "north_america", "western_europe", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["teens_and_up"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Taiwanese",
+            "description": "Night market classics, bubble tea origins, beef noodle soup",
+            "search_query_template": "Taiwanese restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["east_asia", "north_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "instagram_worthy"]
+            }
+          }
+        ]
+      },
+      "Southeast Asian": {
+        "description": "Cuisines from Thailand, Vietnam, Indonesia, Malaysia, Philippines, Singapore",
+        "subcategories": [
+          {
+            "name": "Thai",
+            "description": "Aromatic curries, pad thai, tom yum, and street food classics",
+            "search_query_template": "Thai restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "tropical"],
+              "geo_region": ["southeast_asia", "north_america", "western_europe", "oceania", "east_asia"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["local_favorite", "instagram_worthy"]
+            }
+          },
+          {
+            "name": "Vietnamese",
+            "description": "Pho, banh mi, fresh spring rolls, and herb-forward dishes",
+            "search_query_template": "Vietnamese restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["southeast_asia", "north_america", "western_europe", "oceania"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Indonesian",
+            "description": "Satay, rendang, nasi goreng, and diverse island cuisines",
+            "search_query_template": "Indonesian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "tropical", "island"],
+              "geo_region": ["southeast_asia", "oceania"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Malaysian",
+            "description": "Laksa, char kway teow, multicultural fusion cuisine",
+            "search_query_template": "Malaysian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["southeast_asia", "oceania", "east_asia"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Filipino",
+            "description": "Adobo, lechon, sinigang, and Spanish-influenced dishes",
+            "search_query_template": "Filipino restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "island"],
+              "geo_region": ["southeast_asia", "north_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          },
+          {
+            "name": "Singaporean",
+            "description": "Hawker center favorites, chili crab, Hainanese chicken rice",
+            "search_query_template": "Singaporean restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["southeast_asia", "east_asia"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "instagram_worthy"]
+            }
+          }
+        ]
+      },
+      "South Asian": {
+        "description": "Cuisines from India, Pakistan, Bangladesh, Sri Lanka, Nepal",
+        "subcategories": [
+          {
+            "name": "North Indian",
+            "description": "Butter chicken, tandoori, naan, creamy curries",
+            "search_query_template": "North Indian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["south_asia", "middle_east", "western_europe", "north_america", "oceania", "east_asia"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          },
+          {
+            "name": "South Indian",
+            "description": "Dosa, idli, sambar, coconut-based curries",
+            "search_query_template": "South Indian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["south_asia", "middle_east", "oceania", "southeast_asia"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Pakistani",
+            "description": "Karahi, biryani, kebabs, nihari",
+            "search_query_template": "Pakistani restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["south_asia", "middle_east", "western_europe", "north_america"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Sri Lankan",
+            "description": "Rice and curry, hoppers, kottu roti, seafood specialties",
+            "search_query_template": "Sri Lankan restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "tropical"],
+              "geo_region": ["south_asia", "oceania", "middle_east"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Nepali",
+            "description": "Momos, dal bhat, Himalayan comfort food",
+            "search_query_template": "Nepali restaurants in {city}",
+            "tags": {
+              "geo_type": ["mountain", "urban"],
+              "geo_region": ["south_asia", "east_asia"],
+              "infrastructure": ["developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "hidden_gem"]
+            }
+          }
+        ]
+      },
+      "Middle Eastern": {
+        "description": "Cuisines from Lebanon, Turkey, Iran, Israel, Gulf states",
+        "subcategories": [
+          {
+            "name": "Lebanese",
+            "description": "Mezze, shawarma, tabbouleh, grilled meats",
+            "search_query_template": "Lebanese restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["middle_east", "western_europe", "north_america", "south_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          },
+          {
+            "name": "Turkish",
+            "description": "Kebabs, baklava, mezze, Ottoman-influenced cuisine",
+            "search_query_template": "Turkish restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["middle_east", "western_europe", "eastern_europe", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "instagram_worthy"]
+            }
+          },
+          {
+            "name": "Persian/Iranian",
+            "description": "Kebab koobideh, tahdig, stews, saffron rice",
+            "search_query_template": "Persian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["middle_east", "western_europe", "north_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "hidden_gem"]
+            }
+          },
+          {
+            "name": "Israeli",
+            "description": "Hummus, falafel, shakshuka, modern Middle Eastern fusion",
+            "search_query_template": "Israeli restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["middle_east", "north_america", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "instagram_worthy"]
+            }
+          },
+          {
+            "name": "Emirati/Gulf",
+            "description": "Al harees, machboos, camel dishes, Arabian hospitality",
+            "search_query_template": "Emirati restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "desert"],
+              "geo_region": ["middle_east"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "bucket_list"]
+            }
+          }
+        ]
+      },
+      "Western European": {
+        "description": "Cuisines from France, Italy, Spain, Belgium, Netherlands",
+        "subcategories": [
+          {
+            "name": "French",
+            "description": "Classic haute cuisine, bistro fare, pastries, wine pairing",
+            "search_query_template": "French restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "rural"],
+              "geo_region": ["western_europe", "north_america", "east_asia", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "business_travel", "group_friends"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["adults_only"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": ["not_for_budget"],
+              "logistics": ["requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["romantic_setting", "bucket_list", "instagram_worthy"]
+            }
+          },
+          {
+            "name": "Italian",
+            "description": "Pasta, pizza, risotto, regional specialties",
+            "search_query_template": "Italian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "rural"],
+              "geo_region": ["western_europe", "southern_europe", "north_america", "south_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["romantic_setting", "family_friendly_atmosphere", "local_favorite"]
+            }
+          },
+          {
+            "name": "Spanish",
+            "description": "Tapas, paella, jamón, regional Spanish cuisine",
+            "search_query_template": "Spanish restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["southern_europe", "north_america", "south_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "party_atmosphere", "romantic_setting"]
+            }
+          },
+          {
+            "name": "Belgian",
+            "description": "Mussels, waffles, frites, beer cuisine",
+            "search_query_template": "Belgian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["western_europe", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          }
+        ]
+      },
+      "Southern European": {
+        "description": "Cuisines from Greece, Portugal, Mediterranean regions",
+        "subcategories": [
+          {
+            "name": "Greek",
+            "description": "Souvlaki, moussaka, mezze, Mediterranean flavors",
+            "search_query_template": "Greek restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "island"],
+              "geo_region": ["southern_europe", "north_america", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere", "romantic_setting"]
+            }
+          },
+          {
+            "name": "Portuguese",
+            "description": "Bacalhau, pastéis de nata, grilled sardines, port wine",
+            "search_query_template": "Portuguese restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["southern_europe", "south_america", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Mediterranean Fusion",
+            "description": "Modern Mediterranean combining Greek, Turkish, North African influences",
+            "search_query_template": "Mediterranean restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["southern_europe", "western_europe", "north_america", "middle_east"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["instagram_worthy", "romantic_setting"]
+            }
+          }
+        ]
+      },
+      "Central & Northern European": {
+        "description": "German, Austrian, Swiss, Scandinavian cuisines",
+        "subcategories": [
+          {
+            "name": "German",
+            "description": "Sausages, schnitzel, pretzels, beer hall cuisine",
+            "search_query_template": "German restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["western_europe", "eastern_europe", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": ["christmas_period"],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "party_atmosphere"]
+            }
+          },
+          {
+            "name": "Austrian",
+            "description": "Wiener schnitzel, strudel, Viennese café culture",
+            "search_query_template": "Austrian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "mountain"],
+              "geo_region": ["western_europe", "eastern_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": ["christmas_period"],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["romantic_setting", "local_favorite"]
+            }
+          },
+          {
+            "name": "Scandinavian",
+            "description": "Nordic cuisine, seafood, smørrebrød, New Nordic movement",
+            "search_query_template": "Scandinavian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["northern_europe", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["adults_only"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": ["not_for_budget"],
+              "logistics": ["requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["bucket_list", "instagram_worthy"]
+            }
+          },
+          {
+            "name": "Swiss",
+            "description": "Fondue, raclette, rösti, Alpine cuisine",
+            "search_query_template": "Swiss restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "mountain"],
+              "geo_region": ["western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["winter", "all_season"],
+              "season_special": ["ski_season"],
+              "weather_requirement": ["cold_weather_required"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": ["not_for_budget"],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["romantic_setting", "local_favorite"]
+            }
+          }
+        ]
+      },
+      "Eastern European": {
+        "description": "Russian, Polish, Czech, Ukrainian cuisines",
+        "subcategories": [
+          {
+            "name": "Russian",
+            "description": "Borscht, pelmeni, blini, caviar, vodka culture",
+            "search_query_template": "Russian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["eastern_europe", "central_asia", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "group_friends"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["adults_only"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Polish",
+            "description": "Pierogi, bigos, kielbasa, hearty Eastern European fare",
+            "search_query_template": "Polish restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["eastern_europe", "western_europe", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "Czech",
+            "description": "Goulash, svíčková, dumplings, beer hall culture",
+            "search_query_template": "Czech restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["eastern_europe", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          }
+        ]
+      },
+      "North African": {
+        "description": "Moroccan, Egyptian, Tunisian, Algerian cuisines",
+        "subcategories": [
+          {
+            "name": "Moroccan",
+            "description": "Tagine, couscous, pastilla, mint tea rituals",
+            "search_query_template": "Moroccan restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "desert"],
+              "geo_region": ["north_africa", "western_europe", "north_america", "middle_east"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["romantic_setting", "instagram_worthy", "local_favorite"]
+            }
+          },
+          {
+            "name": "Egyptian",
+            "description": "Koshari, ful medames, kofta, Nile River specialties",
+            "search_query_template": "Egyptian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "riverside"],
+              "geo_region": ["north_africa", "middle_east"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          }
+        ]
+      },
+      "Sub-Saharan African": {
+        "description": "Ethiopian, Nigerian, South African cuisines",
+        "subcategories": [
+          {
+            "name": "Ethiopian",
+            "description": "Injera, doro wat, communal eating traditions",
+            "search_query_template": "Ethiopian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["sub_saharan_africa", "north_america", "western_europe", "middle_east"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "group_friends"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["teens_and_up"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "hidden_gem"]
+            }
+          },
+          {
+            "name": "Nigerian",
+            "description": "Jollof rice, suya, egusi soup, West African flavors",
+            "search_query_template": "Nigerian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["sub_saharan_africa", "western_europe", "north_america"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          },
+          {
+            "name": "South African",
+            "description": "Braai, bobotie, bunny chow, Cape Malay influence",
+            "search_query_template": "South African restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["sub_saharan_africa", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          }
+        ]
+      },
+      "North American": {
+        "description": "American regional, Canadian, Tex-Mex",
+        "subcategories": [
+          {
+            "name": "American - Classic",
+            "description": "Burgers, steaks, BBQ, comfort food",
+            "search_query_template": "American restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "rural"],
+              "geo_region": ["north_america", "western_europe", "east_asia", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity", "accessibility_friendly"],
+              "vibe": ["family_friendly_atmosphere", "local_favorite"]
+            }
+          },
+          {
+            "name": "Southern/Soul Food",
+            "description": "Fried chicken, gumbo, collard greens, cornbread",
+            "search_query_template": "Southern food restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "rural"],
+              "geo_region": ["north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          },
+          {
+            "name": "Tex-Mex",
+            "description": "Fajitas, nachos, chili con carne, American-Mexican fusion",
+            "search_query_template": "Tex-Mex restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["north_america", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["family_friendly_atmosphere", "party_atmosphere"]
+            }
+          },
+          {
+            "name": "Canadian",
+            "description": "Poutine, tourtière, Montreal smoked meat",
+            "search_query_template": "Canadian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          }
+        ]
+      },
+      "Mexican & Central American": {
+        "description": "Mexican regional, Guatemalan, Costa Rican cuisines",
+        "subcategories": [
+          {
+            "name": "Mexican - Traditional",
+            "description": "Tacos, mole, pozole, authentic regional Mexican",
+            "search_query_template": "authentic Mexican restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "rural"],
+              "geo_region": ["north_america", "central_america", "south_america", "western_europe"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere", "instagram_worthy"]
+            }
+          },
+          {
+            "name": "Oaxacan",
+            "description": "Mole negro, tlayudas, mezcal, indigenous Oaxacan cuisine",
+            "search_query_template": "Oaxacan restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["north_america", "central_america"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "group_friends"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["adults_only"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "hidden_gem"]
+            }
+          },
+          {
+            "name": "Guatemalan",
+            "description": "Pepián, kak'ik, tamales, Mayan-influenced cuisine",
+            "search_query_template": "Guatemalan restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "mountain"],
+              "geo_region": ["central_america", "north_america"],
+              "infrastructure": ["developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "hidden_gem"]
+            }
+          }
+        ]
+      },
+      "Caribbean": {
+        "description": "Cuban, Jamaican, Puerto Rican, Dominican cuisines",
+        "subcategories": [
+          {
+            "name": "Cuban",
+            "description": "Ropa vieja, moros y cristianos, Cuban sandwiches",
+            "search_query_template": "Cuban restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "tropical"],
+              "geo_region": ["caribbean", "north_america", "south_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "party_atmosphere"]
+            }
+          },
+          {
+            "name": "Jamaican",
+            "description": "Jerk chicken, ackee and saltfish, patties, rum culture",
+            "search_query_template": "Jamaican restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "tropical", "island"],
+              "geo_region": ["caribbean", "north_america", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "party_atmosphere"]
+            }
+          },
+          {
+            "name": "Puerto Rican",
+            "description": "Mofongo, arroz con gandules, pernil, Latin Caribbean fusion",
+            "search_query_template": "Puerto Rican restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "tropical"],
+              "geo_region": ["caribbean", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          }
+        ]
+      },
+      "South American": {
+        "description": "Peruvian, Brazilian, Argentine, Colombian cuisines",
+        "subcategories": [
+          {
+            "name": "Peruvian",
+            "description": "Ceviche, lomo saltado, anticuchos, Nikkei fusion",
+            "search_query_template": "Peruvian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "mountain"],
+              "geo_region": ["south_america", "north_america", "western_europe", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["instagram_worthy", "bucket_list", "local_favorite"]
+            }
+          },
+          {
+            "name": "Brazilian",
+            "description": "Churrasco, feijoada, açaí, Brazilian BBQ",
+            "search_query_template": "Brazilian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["south_america", "north_america", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "party_atmosphere"]
+            }
+          },
+          {
+            "name": "Argentine",
+            "description": "Asado, empanadas, milanesa, Malbec wine culture",
+            "search_query_template": "Argentine restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "rural"],
+              "geo_region": ["south_america", "north_america", "western_europe"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["romantic_setting", "local_favorite"]
+            }
+          },
+          {
+            "name": "Colombian",
+            "description": "Bandeja paisa, arepas, ajiaco, coastal and mountain cuisine",
+            "search_query_template": "Colombian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal", "mountain"],
+              "geo_region": ["south_america", "north_america"],
+              "infrastructure": ["developed", "developing"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["budget", "mid_range"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite"]
+            }
+          }
+        ]
+      },
+      "Oceanian": {
+        "description": "Australian, New Zealand, Pacific Island cuisines",
+        "subcategories": [
+          {
+            "name": "Modern Australian",
+            "description": "Bush tucker, seafood, multicultural fusion, café culture",
+            "search_query_template": "Modern Australian restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "coastal"],
+              "geo_region": ["oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["instagram_worthy", "local_favorite"]
+            }
+          },
+          {
+            "name": "Pacific Island",
+            "description": "Polynesian, Hawaiian poke, tropical island cuisine",
+            "search_query_template": "Pacific Island restaurants in {city}",
+            "tags": {
+              "geo_type": ["coastal", "tropical", "island"],
+              "geo_region": ["oceania", "pacific_islands", "north_america"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["warm_weather_required"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["local_favorite", "family_friendly_atmosphere"]
+            }
+          }
+        ]
+      },
+      "Fusion & Contemporary": {
+        "description": "Modern fusion cuisines and contemporary interpretations",
+        "subcategories": [
+          {
+            "name": "Asian Fusion",
+            "description": "Modern blends of East/Southeast Asian cuisines",
+            "search_query_template": "Asian fusion restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["north_america", "western_europe", "east_asia", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["walk_in_ok", "requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["instagram_worthy", "romantic_setting"]
+            }
+          },
+          {
+            "name": "Contemporary European",
+            "description": "Modern interpretations of European classics",
+            "search_query_template": "contemporary European restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban"],
+              "geo_region": ["western_europe", "northern_europe", "north_america", "east_asia"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "business_travel"],
+              "trip_exclude": ["family_young_children"],
+              "age_appropriate": ["adults_only"],
+              "budget_level": ["luxury"],
+              "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+              "logistics": ["requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["romantic_setting", "bucket_list"]
+            }
+          },
+          {
+            "name": "Farm-to-Table/Local",
+            "description": "Seasonal, locally-sourced, sustainable dining",
+            "search_query_template": "farm to table restaurants in {city}",
+            "tags": {
+              "geo_type": ["urban", "rural"],
+              "geo_region": ["north_america", "western_europe", "oceania"],
+              "infrastructure": ["developed"],
+              "season": ["all_season"],
+              "season_special": [],
+              "weather_requirement": ["any_weather"],
+              "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+              "trip_exclude": [],
+              "age_appropriate": ["all_ages"],
+              "budget_level": ["mid_range", "luxury"],
+              "budget_exclude": [],
+              "logistics": ["requires_advance_booking"],
+              "timing": ["available_daily"],
+              "physical": ["low_activity"],
+              "vibe": ["instagram_worthy", "local_favorite"]
+            }
+          }
+        ]
+      }
+    },
+    "formats": {
+      "description": "Types of dining establishments and experiences",
+      "subcategories": [
+        {
+          "name": "Fine Dining",
+          "description": "Michelin-starred and upscale restaurants with premium service",
+          "search_query_template": "fine dining restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["western_europe", "east_asia", "north_america", "southern_europe", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "business_travel"],
+            "trip_exclude": ["family_young_children", "not_for_toddlers"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["luxury"],
+            "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["romantic_setting", "bucket_list", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Casual Dining",
+          "description": "Family-friendly restaurants, bistros, trattorias",
+          "search_query_template": "casual dining restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["family_friendly_atmosphere", "local_favorite"]
+          }
+        },
+        {
+          "name": "Street Food & Food Stalls",
+          "description": "Outdoor vendors, hawker stalls, food carts",
+          "search_query_template": "street food in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["southeast_asia", "east_asia", "south_asia", "central_america", "south_america", "middle_east", "north_africa"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["business_travel"],
+            "age_appropriate": ["teens_and_up"],
+            "budget_level": ["budget"],
+            "budget_exclude": ["not_for_luxury"],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily", "nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "instagram_worthy", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Food Halls & Markets",
+          "description": "Multi-vendor halls, gourmet markets, food courts",
+          "search_query_template": "food halls in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "east_asia", "oceania", "southeast_asia"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity", "accessibility_friendly"],
+            "vibe": ["local_favorite", "instagram_worthy", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Rooftop & Scenic Dining",
+          "description": "Rooftop restaurants, waterfront dining, panoramic views",
+          "search_query_template": "rooftop restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily", "nighttime_only"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "romantic_setting", "bucket_list"]
+          }
+        },
+        {
+          "name": "Cafés & Coffee Shops",
+          "description": "Specialty coffee, brunch spots, tea houses, patisseries",
+          "search_query_template": "best cafes in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "local_favorite", "quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Bakeries & Dessert Shops",
+          "description": "Artisan bakeries, dessert bars, ice cream shops, chocolate cafes",
+          "search_query_template": "bakeries in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "local_favorite", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Wine Bars & Tasting Rooms",
+          "description": "Wine bars, vineyard dining, sommelier experiences",
+          "search_query_template": "wine bars in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["western_europe", "southern_europe", "north_america", "south_america", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": ["autumn_foliage"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "group_friends", "business_travel"],
+            "trip_exclude": ["family_young_children", "family_teens"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["romantic_setting", "local_favorite", "quiet_relaxing"]
+          }
+        },
+        {
+          "name": "Breweries & Beer Gardens",
+          "description": "Craft breweries, taprooms, beer gardens, pub culture",
+          "search_query_template": "breweries in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["north_america", "western_europe", "northern_europe", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "family_teens", "business_travel"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "party_atmosphere"]
+          }
+        },
+        {
+          "name": "Traditional Pubs & Taverns",
+          "description": "Historic pubs, local taverns, neighborhood bars",
+          "search_query_template": "traditional pubs in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["western_europe", "northern_europe", "north_america", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["family_young_children", "business_travel"],
+            "age_appropriate": ["adults_only"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Night Markets",
+          "description": "Evening food markets, hawker centers, late-night food scenes",
+          "search_query_template": "night markets in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["east_asia", "southeast_asia", "oceania"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": ["business_travel"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["nighttime_only"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "instagram_worthy", "party_atmosphere"]
+          }
+        },
+        {
+          "name": "Buffet & All-You-Can-Eat",
+          "description": "Hotel buffets, themed buffets, unlimited dining",
+          "search_query_template": "buffet restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal"],
+            "geo_region": ["north_america", "east_asia", "middle_east", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": ["romantic_couple"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Food Trucks & Pop-Ups",
+          "description": "Mobile food vendors, temporary dining experiences",
+          "search_query_template": "food trucks in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["spring", "summer", "autumn"],
+            "season_special": [],
+            "weather_requirement": ["dry_weather_required"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": ["business_travel"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["moderate_activity"],
+            "vibe": ["local_favorite", "instagram_worthy", "off_beaten_path"]
+          }
+        },
+        {
+          "name": "Themed & Experiential Dining",
+          "description": "Immersive dining, dinner shows, character dining",
+          "search_query_template": "themed restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["east_asia", "north_america", "western_europe", "middle_east"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": ["business_travel"],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["instagram_worthy", "bucket_list", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Hotel & Resort Restaurants",
+          "description": "Hotel fine dining, resort restaurants, pool bars",
+          "search_query_template": "hotel restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban", "coastal", "mountain", "island"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_young_children", "family_teens", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["romantic_setting", "family_friendly_atmosphere", "quiet_relaxing"]
+          }
+        }
+      ]
+    },
+    "dietary": {
+      "description": "Dietary preferences and special requirements",
+      "subcategories": [
+        {
+          "name": "Vegan",
+          "description": "Fully plant-based cuisine, no animal products",
+          "search_query_template": "vegan restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "oceania", "east_asia", "southeast_asia"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Vegetarian",
+          "description": "Meatless cuisine, may include dairy and eggs",
+          "search_query_template": "vegetarian restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Halal",
+          "description": "Islamic dietary law compliant cuisine",
+          "search_query_template": "halal restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["middle_east", "south_asia", "southeast_asia", "north_africa", "western_europe", "east_asia"],
+            "infrastructure": ["developed", "developing"],
+            "season": ["all_season"],
+            "season_special": ["ramadan"],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "family_friendly_atmosphere"]
+          }
+        },
+        {
+          "name": "Kosher",
+          "description": "Jewish dietary law compliant cuisine",
+          "search_query_template": "kosher restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["middle_east", "north_america", "western_europe"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Gluten-Free",
+          "description": "No wheat, barley, rye, or gluten-containing ingredients",
+          "search_query_template": "gluten free restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "oceania", "east_asia"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Organic & Farm-to-Table",
+          "description": "Certified organic ingredients, sustainable sourcing",
+          "search_query_template": "organic restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban", "rural"],
+            "geo_region": ["north_america", "western_europe", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": ["not_for_budget"],
+            "logistics": ["requires_advance_booking"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "instagram_worthy"]
+          }
+        },
+        {
+          "name": "Pescatarian",
+          "description": "Vegetarian diet including fish and seafood",
+          "search_query_template": "seafood restaurants in {city}",
+          "tags": {
+            "geo_type": ["coastal", "urban", "island"],
+            "geo_region": ["all"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends", "business_travel"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite", "romantic_setting"]
+          }
+        },
+        {
+          "name": "Keto & Low-Carb",
+          "description": "High-fat, low-carbohydrate ketogenic-friendly options",
+          "search_query_template": "keto friendly restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "oceania"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["local_favorite"]
+          }
+        },
+        {
+          "name": "Allergen-Friendly",
+          "description": "Nut-free, dairy-free, soy-free options available",
+          "search_query_template": "allergen friendly restaurants in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["north_america", "western_europe", "oceania", "east_asia"],
+            "infrastructure": ["developed"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_young_children", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["mid_range", "luxury"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity"],
+            "vibe": ["family_friendly_atmosphere"]
+          }
+        }
+      ]
+    }
+  }
+}

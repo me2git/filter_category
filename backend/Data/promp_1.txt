@@ -1,0 +1,656 @@
+# Task: Create Comprehensive Tourism Category System with Smart Filtering
+
+## Objective
+Research and create a structured categorization system for a travel planning application. The system will help users select preferences to find specific places, activities, and restaurants in their chosen destination.
+
+---
+
+## KNOWN USER DATA (available before category selection)
+
+The system receives these inputs BEFORE showing category lists:
+
+### 1. Location
+- Country (e.g., "Italy")
+- City (e.g., "Rome")
+- City will have predefined tags (urban/coastal/mountain, region, climate, etc.)
+
+### 2. Travel Dates
+- Exact dates → derive SEASON:
+  - winter (Dec-Feb)
+  - spring (Mar-May)
+  - summer (Jun-Aug)
+  - autumn (Sep-Nov)
+- Also detect: holidays (Christmas, New Year, Easter, etc.)
+
+### 3. Trip Type
+```
+solo_trip              # traveling alone
+romantic_couple        # honeymoon, anniversary, romantic getaway
+couple_travel          # two friends, non-romantic pair
+family_young_children  # families with children under 12
+family_teens           # families with teenagers 13+
+group_friends          # friend groups (3+)
+business_travel        # work-related travel
+```
+
+### 4. Budget Level
+```
+budget      # $ - cost-conscious travelers
+mid_range   # $$ - comfortable spending
+luxury      # $$$ - premium experiences
+```
+
+---
+
+## DELIVERABLES
+
+### 1. THREE SEPARATE HIERARCHICAL LISTS
+
+Create three distinct, non-overlapping lists:
+
+#### A) PLACES TO VISIT
+Categories of attractions and points of interest (NOT activities — things you GO TO and SEE).
+
+Examples: museums, parks, viewpoints, historical sites, markets, neighborhoods, monuments, beaches, gardens.
+
+Structure:
+- Main category (e.g., "Cultural Sites")
+  - Subcategory (e.g., "Museums", "Galleries", "Theaters")
+
+#### B) ACTIVITIES & EXPERIENCES  
+Things to DO (actions, experiences, tours, classes — things you PARTICIPATE IN).
+
+Examples: surfing lessons, wine tasting tours, cooking classes, hiking, city walking tours, spa treatments, snorkeling trips.
+
+Structure:
+- Main category (e.g., "Water Sports")
+  - Subcategory (e.g., "Surfing", "Scuba Diving", "Kayaking")
+
+#### C) FOOD & DINING
+Three sub-sections required:
+
+**C1) Cuisine Types** (WHAT to eat)
+- All major world cuisines organized by region
+- Include regional variations where significant (e.g., Cantonese vs Sichuan)
+
+**C2) Dining Formats** (WHERE/HOW to eat)
+- Examples: fine dining, street food, food markets, cafes, rooftop restaurants, food halls, local taverns
+
+**C3) Dietary Preferences** (special requirements)
+- Examples: vegan, vegetarian, halal, kosher, gluten-free, organic, farm-to-table
+
+---
+
+### 2. MULTI-DIMENSIONAL TAG SYSTEM
+
+Each subcategory MUST have tags across ALL dimensions:
+
+#### A) GEOGRAPHY TAGS (for location-based filtering)
+```
+[GEO_TYPE]: coastal, mountain, desert, tropical, arctic, urban, rural, island, riverside, lakeside, forest, plains, volcanic
+[GEO_REGION]: western_europe, eastern_europe, northern_europe, southern_europe, east_asia, southeast_asia, south_asia, central_asia, middle_east, north_africa, sub_saharan_africa, north_america, central_america, south_america, caribbean, oceania, pacific_islands
+[INFRASTRUCTURE]: developed, developing, remote, adventure_infrastructure
+```
+
+#### B) SEASON TAGS (for date-based filtering)
+```
+[SEASON]: winter, spring, summer, autumn, all_season
+[SEASON_SPECIAL]: christmas_period, new_year, easter, summer_holidays, ski_season, monsoon_avoid, cherry_blossom, autumn_foliage, carnival_season, ramadan
+[WEATHER_REQUIREMENT]: warm_weather_required, cold_weather_required, dry_weather_required, any_weather
+```
+
+#### C) TRIP TYPE TAGS (for traveler filtering)
+```
+[TRIP_IDEAL]: solo_trip, romantic_couple, couple_travel, family_young_children, family_teens, group_friends, business_travel
+[TRIP_EXCLUDE]: not_for_young_children, not_for_toddlers, not_for_business, not_for_solo, adults_only, not_for_seniors
+[AGE_APPROPRIATE]: all_ages, adults_only, teens_and_up, family_oriented, senior_friendly
+```
+
+#### D) BUDGET TAGS (for budget filtering)
+```
+[BUDGET_LEVEL]: budget, mid_range, luxury, free, varies_widely
+[BUDGET_EXCLUDE]: not_for_budget, not_for_luxury, premium_only
+```
+
+#### E) SPECIAL CHARACTERISTIC TAGS
+```
+[LOGISTICS]: requires_advance_booking, requires_license, requires_guide, requires_equipment, walk_in_ok
+[TIMING]: seasonal_only, weather_dependent, time_specific, available_daily, weekend_only, nighttime_only
+[PHYSICAL]: physically_demanding, moderate_activity, low_activity, accessibility_friendly, wheelchair_accessible
+[VIBE]: instagram_worthy, hidden_gem, touristy, local_favorite, off_beaten_path, bucket_list, romantic_setting, family_friendly_atmosphere, party_atmosphere, quiet_relaxing
+```
+
+---
+
+### 3. DETAILED TAG EXAMPLES
+```json
+{
+  "name": "Surfing",
+  "parent_category": "Water Sports",
+  "list": "activities",
+  "tags": {
+    "geo_type": ["coastal", "island"],
+    "geo_region": ["oceania", "southeast_asia", "western_europe", "north_america", "south_america", "caribbean"],
+    "season": ["summer", "all_season"],
+    "season_special": [],
+    "weather_requirement": ["warm_weather_required"],
+    "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+    "trip_exclude": ["family_young_children", "business_travel", "not_for_seniors"],
+    "age_appropriate": ["teens_and_up"],
+    "budget_level": ["budget", "mid_range", "luxury"],
+    "budget_exclude": [],
+    "logistics": ["requires_equipment"],
+    "timing": ["weather_dependent"],
+    "physical": ["physically_demanding"],
+    "vibe": ["instagram_worthy", "bucket_list"]
+  }
+}
+
+{
+  "name": "Christmas Markets",
+  "parent_category": "Seasonal Attractions",
+  "list": "places",
+  "tags": {
+    "geo_type": ["urban"],
+    "geo_region": ["western_europe", "eastern_europe", "northern_europe"],
+    "season": ["winter"],
+    "season_special": ["christmas_period"],
+    "weather_requirement": ["cold_weather_required"],
+    "trip_ideal": ["romantic_couple", "family_young_children", "family_teens", "group_friends", "couple_travel"],
+    "trip_exclude": [],
+    "age_appropriate": ["all_ages"],
+    "budget_level": ["budget", "mid_range"],
+    "budget_exclude": [],
+    "logistics": ["walk_in_ok"],
+    "timing": ["seasonal_only"],
+    "physical": ["low_activity", "accessibility_friendly"],
+    "vibe": ["instagram_worthy", "family_friendly_atmosphere", "romantic_setting"]
+  }
+}
+
+{
+  "name": "Michelin Star Restaurants",
+  "parent_category": "Fine Dining",
+  "list": "dining_formats",
+  "tags": {
+    "geo_type": ["urban"],
+    "geo_region": ["western_europe", "east_asia", "north_america", "southern_europe"],
+    "season": ["all_season"],
+    "season_special": [],
+    "weather_requirement": ["any_weather"],
+    "trip_ideal": ["romantic_couple", "couple_travel", "business_travel"],
+    "trip_exclude": ["family_young_children", "not_for_toddlers"],
+    "age_appropriate": ["adults_only"],
+    "budget_level": ["luxury"],
+    "budget_exclude": ["not_for_budget", "not_for_mid_range"],
+    "logistics": ["requires_advance_booking"],
+    "timing": ["available_daily"],
+    "physical": ["low_activity"],
+    "vibe": ["romantic_setting", "bucket_list"]
+  }
+}
+
+{
+  "name": "Water Parks",
+  "parent_category": "Family Entertainment",
+  "list": "places",
+  "tags": {
+    "geo_type": ["urban", "coastal", "tropical"],
+    "geo_region": ["north_america", "western_europe", "southeast_asia", "middle_east"],
+    "season": ["summer", "all_season"],
+    "season_special": ["summer_holidays"],
+    "weather_requirement": ["warm_weather_required"],
+    "trip_ideal": ["family_young_children", "family_teens", "group_friends"],
+    "trip_exclude": ["business_travel", "romantic_couple"],
+    "age_appropriate": ["all_ages", "family_oriented"],
+    "budget_level": ["mid_range", "luxury"],
+    "budget_exclude": [],
+    "logistics": ["requires_advance_booking"],
+    "timing": ["seasonal_only", "weather_dependent"],
+    "physical": ["moderate_activity"],
+    "vibe": ["family_friendly_atmosphere"]
+  }
+}
+
+{
+  "name": "Nightclubs & Dance Clubs",
+  "parent_category": "Nightlife",
+  "list": "places",
+  "tags": {
+    "geo_type": ["urban", "coastal"],
+    "geo_region": ["western_europe", "southern_europe", "north_america", "south_america", "east_asia", "caribbean"],
+    "season": ["all_season"],
+    "season_special": [],
+    "weather_requirement": ["any_weather"],
+    "trip_ideal": ["solo_trip", "couple_travel", "group_friends"],
+    "trip_exclude": ["family_young_children", "family_teens", "business_travel"],
+    "age_appropriate": ["adults_only"],
+    "budget_level": ["budget", "mid_range", "luxury"],
+    "budget_exclude": [],
+    "logistics": ["walk_in_ok"],
+    "timing": ["nighttime_only", "weekend_only"],
+    "physical": ["moderate_activity"],
+    "vibe": ["party_atmosphere", "local_favorite"]
+  }
+}
+```
+
+---
+
+### 4. REQUIREMENTS
+
+1. **No duplicates across lists**: Merge similar categories, no item in multiple lists
+   - Bad: "Wine Tourism" + "Vineyard Tours" + "Wine Tasting" as separate items
+   - Good: "Wine & Vineyard Experiences" as ONE category in activities
+
+2. **Strict list separation**: Each item belongs to ONLY ONE of three lists
+   - "Museum" = PLACE (you visit it, look at things)
+   - "Guided Museum Tour" = ACTIVITY (structured experience, you do something)
+   - "Museum Café" = DINING FORMAT (you eat there)
+
+3. **Comprehensive but practical**: 
+   - 15-25 main categories per list
+   - 3-10 subcategories per main category
+   - Target: ~100-150 total subcategories per list (not 300+)
+
+4. **Complete tagging**: EVERY subcategory MUST have tags in ALL 5 dimensions (A through E)
+
+5. **Cuisine completeness**: Include minimum 60 distinct cuisines covering all world regions
+
+6. **Web Research Required**:
+   - Search for comprehensive world cuisine lists by region
+   - Search for TripAdvisor, Viator, GetYourGuide activity categorization
+   - Search for Google Things To Do categories
+   - Search for trending tourism categories 2024-2025
+   - Search for family-friendly vs adults-only classifications
+   - Search for seasonal tourism activities
+
+---
+
+### 5. OUTPUT FORMAT
+
+Provide complete JSON:
+```json
+{
+  "places": {
+    "Cultural & Historical": {
+      "description": "Sites of cultural and historical significance",
+      "subcategories": [
+        {
+          "name": "Art Museums",
+          "description": "Museums focused on visual arts",
+          "search_query_template": "art museums in {city}",
+          "tags": {
+            "geo_type": ["urban"],
+            "geo_region": ["all"],
+            "season": ["all_season"],
+            "season_special": [],
+            "weather_requirement": ["any_weather"],
+            "trip_ideal": ["solo_trip", "romantic_couple", "couple_travel", "family_teens", "group_friends"],
+            "trip_exclude": [],
+            "age_appropriate": ["all_ages"],
+            "budget_level": ["budget", "mid_range", "free"],
+            "budget_exclude": [],
+            "logistics": ["walk_in_ok"],
+            "timing": ["available_daily"],
+            "physical": ["low_activity", "accessibility_friendly"],
+            "vibe": ["instagram_worthy", "bucket_list"]
+          }
+        }
+      ]
+    }
+  },
+  
+  "activities": {
+    "Water Sports": {
+      "description": "Activities in or on the water",
+      "subcategories": [
+        {
+          "name": "Scuba Diving",
+          "description": "Underwater diving with breathing apparatus",
+          "search_query_template": "scuba diving tours in {city}",
+          "tags": {...}
+        }
+      ]
+    }
+  },
+  
+  "dining": {
+    "cuisines": {
+      "East Asian": {
+        "subcategories": [
+          {
+            "name": "Japanese",
+            "description": "Traditional and modern Japanese cuisine",
+            "search_query_template": "Japanese restaurants in {city}",
+            "tags": {...}
+          },
+          {
+            "name": "Sushi & Sashimi",
+            "description": "Specialized raw fish cuisine",
+            "search_query_template": "sushi restaurants in {city}",
+            "tags": {...}
+          }
+        ]
+      },
+      "European": {...},
+      "Middle Eastern": {...},
+      "African": {...},
+      "Americas": {...},
+      "South Asian": {...},
+      "Southeast Asian": {...}
+    },
+    "formats": {
+      "description": "Types of dining establishments and experiences",
+      "subcategories": [
+        {
+          "name": "Fine Dining",
+          "description": "Upscale restaurants with premium service",
+          "search_query_template": "fine dining restaurants in {city}",
+          "tags": {...}
+        },
+        {
+          "name": "Street Food",
+          "description": "Casual outdoor food vendors and stalls",
+          "search_query_template": "street food in {city}",
+          "tags": {...}
+        }
+      ]
+    },
+    "dietary": {
+      "description": "Dietary preferences and restrictions",
+      "subcategories": [
+        {
+          "name": "Vegan",
+          "search_query_template": "vegan restaurants in {city}",
+          "tags": {...}
+        },
+        {
+          "name": "Halal",
+          "search_query_template": "halal restaurants in {city}",
+          "tags": {...}
+        }
+      ]
+    }
+  }
+}
+```
+
+---
+
+### 6. VALIDATION CHECKLIST
+
+Before finalizing, verify:
+
+- [ ] No category appears in more than one list (places/activities/dining)
+- [ ] No duplicate or near-duplicate subcategories within same list
+- [ ] All major world cuisines included (60+ minimum)
+- [ ] All dietary preferences covered (vegan, vegetarian, halal, kosher, gluten-free, dairy-free, nut-free, organic)
+- [ ] EVERY subcategory has ALL tag dimensions filled (no empty tag groups)
+- [ ] Tags correctly filter: nightlife excluded from family_young_children
+- [ ] Tags correctly filter: luxury-only excluded from budget travelers
+- [ ] Tags correctly filter: water sports excluded from landlocked/mountain cities
+- [ ] Seasonal activities properly tagged (skiing=winter, beach swimming=summer)
+- [ ] Business travel has relevant categories (business-friendly dining, efficient tours)
+- [ ] Romantic couple has relevant categories (romantic restaurants, scenic viewpoints, couple activities)
+- [ ] Each subcategory has search_query_template field
+- [ ] Descriptions are clear and help user understand the category
+
+---
+
+### REFERENCE: Existing Category List
+
+Below is an initial list collected earlier. Use it as:
+- A checklist to ensure completeness (don't miss valuable niche categories)
+- NOT as a structure to follow (create your own clean hierarchy)
+- Identify duplicates to merge
+- Some items may be outdated or too niche — use judgment
+```
+Adventure & Outdoor
+Relaxation & Beach
+Cultural & Historical
+Family-Friendly
+Food & Dining
+Nightlife & Entertainment
+Nature & Wildlife
+Shopping
+Luxury & High-End
+Budget & Backpacker
+Wellness & Spa
+Medical & Health Tourism
+Yoga & Meditation Retreats
+Ayurveda & Holistic Healing
+Fitness & Active Wellness
+Mental Health & Digital Detox
+Cosmetic & Aesthetic Tourism
+Thermal Springs & Hot Springs
+Extreme Sports & Adrenaline
+Rock Climbing & Mountaineering
+Winter Sports & Skiing
+Surfing & Water Sports
+Scuba Diving & Snorkeling
+Kayaking & Rafting
+Paragliding & Skydiving
+Heli-Skiing & Off-Piste
+Heritage & UNESCO Sites
+Arts & Performing Arts
+Educational & Learning Travel
+Language Immersion
+Archaeological & Ancient Sites
+Art Museums & Galleries
+Castles & Palaces
+Indigenous Culture & Traditions
+Festivals & Events
+Music Festivals & Concerts
+Wine Tourism & Vineyard Tours
+Brewery & Craft Beer Tours
+Cooking Classes & Culinary Schools
+Street Food & Local Cuisine
+Fine Dining & Michelin Stars
+Cheese & Dairy Tourism
+Chocolate & Confectionery Tours
+Coffee Tourism & Plantations
+Spice Route Tourism
+Whiskey & Distillery Tours
+Business & MICE Travel
+Bleisure (Business + Leisure)
+Volunteer & Voluntourism
+Sustainable & Eco-Tourism
+Regenerative Tourism
+Conservation & Environmental
+Community-Based Tourism
+Religious & Pilgrimage
+Spiritual & Retreat Centers
+Genealogy & Ancestry Travel
+Safari & Big Game Viewing
+Bird Watching & Ornithology
+Whale & Marine Mammal Watching
+Primate Tracking & Gorilla Tours
+Sea Turtle Conservation
+Butterfly & Insect Tourism
+Botanical Gardens & Flower Tours
+Volcano Tourism
+Mountain & Alpine Tourism
+Desert Exploration
+Arctic & Antarctic Expeditions
+National Parks & Wilderness
+Waterfall Chasing
+Coastal & Beach Exploration
+Slow Travel & Deep Immersion
+Fast-Paced & Multi-City
+Backpacking & Budget Adventure
+Digital Nomad & Workation
+Road Trips & Self-Drive
+Motorcycle Touring
+RV & Campervan Travel
+Rail Journeys & Train Travel
+Cruises & Ocean Voyages
+River Cruises
+Sailing & Yacht Charters
+Helicopter Tours
+Hot Air Balloon Rides
+Solo Travel
+Couples & Romantic
+Honeymoon & Wedding Travel
+Babymoon
+Multi-Generational Family
+Group Travel & Friends
+Student & Youth Travel
+Senior & Retirement Travel
+LGBTQ+ Friendly
+Women-Only Travel
+Accessible & Disability-Friendly
+Autism & Sensory-Friendly
+Pet-Friendly Travel
+Weekend Getaways
+Day Trips & Excursions
+Extended Stays & Long-Term
+Gap Year Travel
+Golden Gap Year (Retirement)
+Sabbatical & Career Break
+Cherry Blossom & Spring Blooms
+Autumn Foliage & Fall Colors
+Northern Lights & Aurora
+Dark Sky & Astrotourism
+Midnight Sun Tourism
+Winter Wonderland & Snow
+Summer Beach Season
+Migration Viewing (Wildlife)
+Coolcations (Escaping Heat)
+Shoulder Season Travel
+Sports Events & Tournaments
+Golf Tourism
+Marathon & Running Events
+Cycling & Bike Tours
+Fishing & Angling
+Equestrian & Horse Riding
+Martial Arts & Training Camps
+Sports Training & Retreats
+Photography Tours & Workshops
+Film Locations & Set-Jetting
+Art Workshops & Painting Retreats
+Writing Retreats & Literary
+Instagram & Influencer Travel
+Dark Tourism & Historical Tragedy
+Ghost Tours & Paranormal
+Casino & Gambling Tourism
+Space Tourism & Aerospace
+Industrial Tourism & Factory Tours
+Theme Parks & Amusement
+Roller Coaster Enthusiast
+Stadium & Venue Tours
+Science & Technology Tourism
+Cannabis Tourism
+Literary Tourism & Bookish Travel
+Gaming & Esports Events
+Tech Hub & Silicon Valley Tours
+Karaoke & Singing Experiences
+Urban Exploration & City Breaks
+Architecture & Design Tourism
+Street Art & Graffiti Tours
+Neighborhood & Walking Tours
+Rooftop Experiences & Skylines
+Rural & Countryside Tourism
+Farm Stays & Agritourism
+Village & Small Town Exploration
+Remote & Off-Grid Destinations
+Movie & TV Show Tourism
+Circus & Performance Arts
+Theater & Broadway Shows
+Comedy Shows & Stand-Up
+Music Heritage & Rock Tourism
+Jazz & Blues Tourism
+Classical Music & Opera
+Dance Tourism & Festivals
+Transformational Travel
+Destination Dupes (Alternatives)
+Main Character Energy Travel
+Experiential & Immersive
+Overtourism Avoidance
+Frontier & Unexplored Destinations
+Points & Rewards Travel
+App-Based Discovery Travel
+Island Hopping & Archipelago
+Tropical Destinations
+Oasis & Desert Tourism
+Glacier & Ice Cap Exploration
+Highland & Plateau Tourism
+Fjord Tourism
+Peninsula Exploration
+Lake Districts & Lakefront
+Canyon & Gorge Tourism
+Rainforest Expeditions
+Himalayan & High Altitude
+Private Jet & VIP Travel
+Castle & Manor House Stays
+Superyacht Charters
+Champagne & Luxury Wine Regions
+Jewelry & Luxury Shopping Tours
+Supercar & Luxury Auto Experiences
+Exclusive Events & Galas
+Swimming & Beach Activities
+Stand-Up Paddleboarding (SUP)
+Canoeing & Paddling
+Wave Watching & Storm Chasing
+Water Polo & Aquatic Sports
+Regattas & Sailing Competitions
+Beachcombing & Tide Pooling
+Tie-Dye & Hippie Trail
+UFO & Alien Tourism
+Mystical & New Age Sites
+Festival Circuit & Nomadic Events
+Abandoned Places & Urban Decay
+Mystery & Unexplained Sites
+Medieval Experiences & Reenactments
+Treasure Hunting & Metal Detecting
+Family Theme Park Vacations
+Educational Family Travel
+Family Camping & Outdoor
+Toddler-Friendly Travel
+Baby-Friendly Destinations
+Teen & Tween Focused Travel
+Bachelor/Bachelorette Parties
+Birthday & Milestone Celebrations
+Graduation Trips
+Anniversary Getaways
+Reunion Travel
+Special Occasion Celebrations
+Connected Travel (High WiFi Priority)
+Digital Detox & Off-Grid
+Co-Working Space Tourism
+Tech Conference Travel
+Micro-Cations (Ultra-Short Trips)
+Mini-Moons (Short Post-Wedding)
+Mega-Moons (Extended Honeymoons)
+Ice Skating & Ice Hotels
+Dog Sledding & Husky Tours
+Reindeer & Wildlife Winter Viewing
+Snowshoeing & Winter Hiking
+Christmas Markets & Holiday Trips
+Ice Fishing
+Alpine Villages & Chalets
+Spring Awakening & Nature Tours
+Summer Festivals & Outdoor Events
+Harvest Season & Agricultural Tours
+Halloween & Autumn Festivities
+Thanksgiving Travel
+New Year's Eve Celebrations
+Valentine's Day Getaways
+Easter & Spring Holiday Travel
+Fashion Week Tourism
+Book Fairs & Literary Festivals
+Film Festivals
+Art Biennales & Exhibitions
+Racing & Motorsport Events
+Cultural Carnivals & Parades
+Pride Celebrations & LGBTQ+ Events
+```
+
+---
+
+## FINAL NOTES
+
+- Focus on creating a CLEAN, USABLE structure — not maximum length
+- Every category should generate useful search results when combined with a city name
+- Think from USER perspective: "Would I want to select this when planning a trip?"
+- Merge aggressively: fewer well-defined categories > many overlapping ones
