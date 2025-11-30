@@ -3,14 +3,14 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package files (use frontend/ prefix for cloud deployment)
+COPY frontend/package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy application code
-COPY . .
+# Copy application code from frontend directory
+COPY frontend/ .
 
 # Expose port
 EXPOSE 3000
