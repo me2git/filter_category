@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import './App.css';
 import TripForm from './components/TripForm';
 import Results from './components/Results';
+import AllCategories from './components/AllCategories';
 import { FilterResponse, DateRange } from './types';
+
+type ViewMode = 'filter' | 'all-categories';
+
+const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<FilterResponse | null>(null);
   const [error, setError] = useState<string>('');
+  const [viewMode, setViewMode] = useState<ViewMode>('filter');
 
   const handleSubmit = async (data: {
     city: string;
@@ -22,7 +28,6 @@ function App() {
     setResults(null);
 
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       const response = await fetch(`${apiUrl}/api/filter`, {
         method: 'POST',
         headers: {
@@ -50,25 +55,45 @@ function App() {
       <header className="App-header">
         <h1>Tourism Category Filter Test</h1>
         <p>Test the backend filtering API with different trip parameters</p>
+        <div className="view-switch">
+          <button
+            className={`switch-btn ${viewMode === 'filter' ? 'active' : ''}`}
+            onClick={() => setViewMode('filter')}
+          >
+            Filter Categories
+          </button>
+          <button
+            className={`switch-btn ${viewMode === 'all-categories' ? 'active' : ''}`}
+            onClick={() => setViewMode('all-categories')}
+          >
+            All Categories
+          </button>
+        </div>
       </header>
 
       <main className="App-main">
-        <div className="content-wrapper">
-          <div className="form-section">
-            <TripForm onSubmit={handleSubmit} loading={loading} />
-          </div>
+        {viewMode === 'filter' ? (
+          <div className="content-wrapper">
+            <div className="form-section">
+              <TripForm onSubmit={handleSubmit} loading={loading} />
+            </div>
 
-          <div className="results-section">
-            {error && <div className="error-banner">{error}</div>}
-            {loading && <div className="loading-spinner">Loading recommendations...</div>}
-            {results && <Results data={results} />}
-            {!results && !loading && !error && (
-              <div className="placeholder">
-                <p>Fill out the form and click "Get Recommendations" to see filtered categories.</p>
-              </div>
-            )}
+            <div className="results-section">
+              {error && <div className="error-banner">{error}</div>}
+              {loading && <div className="loading-spinner">Loading recommendations...</div>}
+              {results && <Results data={results} />}
+              {!results && !loading && !error && (
+                <div className="placeholder">
+                  <p>Fill out the form and click "Get Recommendations" to see filtered categories.</p>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="all-categories-wrapper">
+            <AllCategories apiUrl={apiUrl} />
+          </div>
+        )}
       </main>
     </div>
   );

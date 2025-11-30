@@ -21,7 +21,7 @@ const groupByParent = (items: CategoryItem[]): Map<string, CategoryItem[]> => {
 // Subcategory item component
 const SubcategoryItem: React.FC<{ item: CategoryItem }> = ({ item }) => (
   <div className="subcategory-item">
-    <span className="subcategory-name">{item.name}</span>
+    <span className="subcategory-name" title={item.description || ''}>{item.name}</span>
     <span className="relevance-score" title="Relevance Score">
       {item.relevance_score}
     </span>

@@ -87,3 +87,47 @@ export const BUDGET_OPTIONS = [
   { label: "Mid-range ($$)", value: "mid-range" },
   { label: "Luxury ($$$)", value: "luxury" },
 ];
+
+// Types for All Categories view
+export interface SubcategoryTags {
+  geo_type?: string[];
+  geo_region?: string[];
+  infrastructure?: string[];
+  season?: string[];
+  season_special?: string[];
+  weather_requirement?: string[];
+  trip_ideal?: string[];
+  trip_exclude?: string[];
+  age_appropriate?: string[];
+  budget_level?: string[];
+  budget_exclude?: string[];
+  logistics?: string[];
+  timing?: string[];
+  physical?: string[];
+  vibe?: string[];
+  [key: string]: string[] | undefined;
+}
+
+export interface Subcategory {
+  name: string;
+  description: string;
+  search_query_template: string;
+  tags: SubcategoryTags;
+}
+
+export interface ParentCategory {
+  description: string;
+  subcategories: Subcategory[];
+}
+
+export interface DiningCategory {
+  cuisines: Record<string, ParentCategory>;
+  formats: ParentCategory;  // Single category with subcategories directly
+  dietary: ParentCategory;  // Single category with subcategories directly
+}
+
+export interface AllCategories {
+  places: Record<string, ParentCategory>;
+  activities: Record<string, ParentCategory>;
+  dining: DiningCategory;
+}

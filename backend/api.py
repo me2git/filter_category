@@ -141,6 +141,14 @@ def filter_tourism_categories():
         return jsonify({'error': str(e)}), 500
 
 
+@app.route('/api/categories', methods=['GET'])
+def get_all_categories():
+    """Get all categories with their full structure."""
+    with open(CATEGORIES_PATH, 'r', encoding='utf-8') as f:
+        raw_categories = json.load(f)
+    return jsonify(raw_categories)
+
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint."""
