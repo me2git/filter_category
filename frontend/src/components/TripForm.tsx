@@ -31,7 +31,8 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit, loading }) => {
 
   const fetchCities = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/cities');
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiUrl}/api/cities`);
       if (!response.ok) throw new Error('Failed to fetch cities');
       const data = await response.json();
       setCountries(data);
