@@ -461,7 +461,7 @@
       }
     },
     {
-      "city": "D\u00fcsseldorf",
+      "city": "Düsseldorf",
       "country": "Germany",
       "region": "western_europe",
       "tags": {
@@ -1234,7 +1234,8 @@
       "tags": {
         "geo_type": [
           "coastal",
-          "mountain"
+          "mountain",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -1777,9 +1778,9 @@
       "region": "southern_europe",
       "tags": {
         "geo_type": [
-          "urban",
+          "island",
           "coastal",
-          "island"
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -1864,7 +1865,8 @@
           "island",
           "coastal",
           "volcanic",
-          "mountain"
+          "mountain",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2029,7 +2031,8 @@
           "island",
           "coastal",
           "mountain",
-          "volcanic"
+          "volcanic",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2109,7 +2112,8 @@
         "geo_type": [
           "island",
           "coastal",
-          "volcanic"
+          "volcanic",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2147,7 +2151,8 @@
       "tags": {
         "geo_type": [
           "island",
-          "coastal"
+          "coastal",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2188,7 +2193,8 @@
         "geo_type": [
           "island",
           "coastal",
-          "mountain"
+          "mountain",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2228,7 +2234,8 @@
       "tags": {
         "geo_type": [
           "island",
-          "coastal"
+          "coastal",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2269,7 +2276,8 @@
       "tags": {
         "geo_type": [
           "island",
-          "coastal"
+          "coastal",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2385,7 +2393,8 @@
       "tags": {
         "geo_type": [
           "island",
-          "coastal"
+          "coastal",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2462,7 +2471,8 @@
       "tags": {
         "geo_type": [
           "island",
-          "coastal"
+          "coastal",
+          "urban"
         ],
         "geo_region": [
           "southern_europe"
@@ -2704,7 +2714,8 @@
       "tags": {
         "geo_type": [
           "urban",
-          "coastal"
+          "coastal",
+          "mountain"
         ],
         "geo_region": [
           "northern_europe"
@@ -2775,7 +2786,7 @@
       }
     },
     {
-      "city": "Troms\u00f8",
+      "city": "Tromsø",
       "country": "Norway",
       "region": "northern_europe",
       "tags": {
@@ -3368,7 +3379,7 @@
       }
     },
     {
-      "city": "\u010cesk\u00fd Krumlov",
+      "city": "Český Krumlov",
       "country": "Czech Republic",
       "region": "eastern_europe",
       "tags": {
@@ -4369,7 +4380,8 @@
       "region": "east_asia",
       "tags": {
         "geo_type": [
-          "urban"
+          "urban",
+          "mountain"
         ],
         "geo_region": [
           "east_asia"
@@ -5448,7 +5460,9 @@
         "geo_type": [
           "island",
           "coastal",
-          "tropical"
+          "mountain",
+          "tropical",
+          "urban"
         ],
         "geo_region": [
           "southeast_asia"
@@ -5953,9 +5967,10 @@
       "region": "southeast_asia",
       "tags": {
         "geo_type": [
-          "island",
+          "mountain",
           "tropical",
-          "forest"
+          "forest",
+          "urban"
         ],
         "geo_region": [
           "southeast_asia"
@@ -7606,7 +7621,7 @@
       }
     },
     {
-      "city": "Maldives (Mal\u00e9)",
+      "city": "Maldives (Malé)",
       "country": "Maldives",
       "region": "south_asia",
       "tags": {
@@ -9694,7 +9709,8 @@
         "geo_type": [
           "island",
           "coastal",
-          "tropical"
+          "tropical",
+          "urban"
         ],
         "geo_region": [
           "sub_saharan_africa"
@@ -9861,8 +9877,10 @@
         "geo_type": [
           "island",
           "coastal",
+          "volcanic",
           "tropical",
-          "volcanic"
+          "mountain",
+          "urban"
         ],
         "geo_region": [
           "sub_saharan_africa"
@@ -9903,7 +9921,9 @@
         "geo_type": [
           "island",
           "coastal",
-          "tropical"
+          "tropical",
+          "mountain",
+          "urban"
         ],
         "geo_region": [
           "sub_saharan_africa"
@@ -13081,7 +13101,8 @@
           "island",
           "coastal",
           "tropical",
-          "desert"
+          "desert",
+          "urban"
         ],
         "geo_region": [
           "caribbean"
@@ -13113,8 +13134,8 @@
       }
     },
     {
-      "city": "Cura\u00e7ao",
-      "country": "Cura\u00e7ao",
+      "city": "Curaçao",
+      "country": "Curaçao",
       "region": "caribbean",
       "tags": {
         "geo_type": [
@@ -13388,7 +13409,7 @@
       }
     },
     {
-      "city": "Costa Rica (San Jos\u00e9)",
+      "city": "Costa Rica (San José)",
       "country": "Costa Rica",
       "region": "central_america",
       "tags": {
@@ -13764,7 +13785,7 @@
       }
     },
     {
-      "city": "S\u00e3o Paulo",
+      "city": "São Paulo",
       "country": "Brazil",
       "region": "south_america",
       "tags": {
@@ -13841,7 +13862,7 @@
       }
     },
     {
-      "city": "Florian\u00f3polis",
+      "city": "Florianópolis",
       "country": "Brazil",
       "region": "south_america",
       "tags": {
@@ -14207,7 +14228,7 @@
       }
     },
     {
-      "city": "Bogot\u00e1",
+      "city": "Bogotá",
       "country": "Colombia",
       "region": "south_america",
       "tags": {
@@ -14278,7 +14299,7 @@
       }
     },
     {
-      "city": "Medell\u00edn",
+      "city": "Medellín",
       "country": "Colombia",
       "region": "south_america",
       "tags": {
@@ -14349,7 +14370,7 @@
       }
     },
     {
-      "city": "Valpara\u00edso",
+      "city": "Valparaíso",
       "country": "Chile",
       "region": "south_america",
       "tags": {
@@ -14449,7 +14470,7 @@
       }
     },
     {
-      "city": "Gal\u00e1pagos Islands",
+      "city": "Galápagos Islands",
       "country": "Ecuador",
       "region": "south_america",
       "tags": {
@@ -14611,7 +14632,7 @@
       }
     },
     {
-      "city": "Asunci\u00f3n",
+      "city": "Asunción",
       "country": "Paraguay",
       "region": "south_america",
       "tags": {
@@ -15569,7 +15590,8 @@
           "island",
           "coastal",
           "tropical",
-          "volcanic"
+          "volcanic",
+          "urban"
         ],
         "geo_region": [
           "pacific_islands"
@@ -15611,7 +15633,8 @@
           "coastal",
           "tropical",
           "volcanic",
-          "mountain"
+          "mountain",
+          "urban"
         ],
         "geo_region": [
           "pacific_islands"
@@ -15766,7 +15789,7 @@
       }
     },
     {
-      "city": "New Caledonia (Noum\u00e9a)",
+      "city": "New Caledonia (Nouméa)",
       "country": "France",
       "region": "pacific_islands",
       "tags": {
