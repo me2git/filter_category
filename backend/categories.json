@@ -8304,6 +8304,7 @@
           "subcategories": [
             {
               "name": "Japanese",
+              "country": "Japan",
               "description": "Traditional and modern Japanese cuisine including sushi, ramen, tempura",
               "search_query_template": "Japanese restaurants in {city}",
               "tags": {
@@ -8367,6 +8368,7 @@
             },
             {
               "name": "Sushi & Sashimi",
+              "country": "Japan",
               "description": "Specialized raw fish cuisine and omakase experiences",
               "search_query_template": "sushi restaurants in {city}",
               "tags": {
@@ -8429,6 +8431,7 @@
             },
             {
               "name": "Korean",
+              "country": "South Korea",
               "description": "Korean BBQ, kimchi, bibimbap, and traditional Korean dishes",
               "search_query_template": "Korean restaurants in {city}",
               "tags": {
@@ -8488,6 +8491,7 @@
             },
             {
               "name": "Chinese - Cantonese",
+              "country": "China",
               "description": "Southern Chinese cuisine including dim sum, roasted meats, seafood",
               "search_query_template": "Cantonese restaurants in {city}",
               "tags": {
@@ -8546,6 +8550,7 @@
             },
             {
               "name": "Chinese - Sichuan",
+              "country": "China",
               "description": "Spicy western Chinese cuisine with numbing peppercorns",
               "search_query_template": "Sichuan restaurants in {city}",
               "tags": {
@@ -8601,6 +8606,7 @@
             },
             {
               "name": "Taiwanese",
+              "country": "Taiwan",
               "description": "Night market classics, bubble tea origins, beef noodle soup",
               "search_query_template": "Taiwanese restaurants in {city}",
               "tags": {
@@ -8660,6 +8666,7 @@
           "subcategories": [
             {
               "name": "Thai",
+              "country": "Thailand",
               "description": "Aromatic curries, pad thai, tom yum, and street food classics",
               "search_query_template": "Thai restaurants in {city}",
               "tags": {
@@ -8722,6 +8729,7 @@
             },
             {
               "name": "Vietnamese",
+              "country": "Vietnam",
               "description": "Pho, banh mi, fresh spring rolls, and herb-forward dishes",
               "search_query_template": "Vietnamese restaurants in {city}",
               "tags": {
@@ -8778,6 +8786,7 @@
             },
             {
               "name": "Indonesian",
+              "country": "Indonesia",
               "description": "Satay, rendang, nasi goreng, and diverse island cuisines",
               "search_query_template": "Indonesian restaurants in {city}",
               "tags": {
@@ -8833,6 +8842,7 @@
             },
             {
               "name": "Malaysian",
+              "country": "Malaysia",
               "description": "Laksa, char kway teow, multicultural fusion cuisine",
               "search_query_template": "Malaysian restaurants in {city}",
               "tags": {
@@ -8887,6 +8897,7 @@
             },
             {
               "name": "Filipino",
+              "country": "Philippines",
               "description": "Adobo, lechon, sinigang, and Spanish-influenced dishes",
               "search_query_template": "Filipino restaurants in {city}",
               "tags": {
@@ -8944,6 +8955,7 @@
             },
             {
               "name": "Singaporean",
+              "country": "Singapore",
               "description": "Hawker center favorites, chili crab, Hainanese chicken rice",
               "search_query_template": "Singaporean restaurants in {city}",
               "tags": {
@@ -9000,6 +9012,7 @@
             },
             {
               "name": "Burmese",
+              "country": "Myanmar",
               "description": "Mohinga, laphet thoke, shan noodles, tea leaf salad",
               "search_query_template": "Burmese restaurants in {city}",
               "tags": {
@@ -9053,6 +9066,7 @@
             },
             {
               "name": "Cambodian",
+              "country": "Cambodia",
               "description": "Fish amok, lok lak, num banh chok, Khmer curry",
               "search_query_template": "Cambodian restaurants in {city}",
               "tags": {
@@ -9105,6 +9119,7 @@
             },
             {
               "name": "Laotian",
+              "country": "Laos",
               "description": "Larb, sticky rice, tam mak hoong, khao piak sen",
               "search_query_template": "Laotian restaurants in {city}",
               "tags": {
@@ -9162,6 +9177,7 @@
           "subcategories": [
             {
               "name": "North Indian",
+              "country": "India",
               "description": "Butter chicken, tandoori, naan, creamy curries",
               "search_query_template": "North Indian restaurants in {city}",
               "tags": {
@@ -9224,6 +9240,7 @@
             },
             {
               "name": "South Indian",
+              "country": "India",
               "description": "Dosa, idli, sambar, coconut-based curries",
               "search_query_template": "South Indian restaurants in {city}",
               "tags": {
@@ -9280,6 +9297,7 @@
             },
             {
               "name": "Pakistani",
+              "country": "Pakistan",
               "description": "Karahi, biryani, kebabs, nihari",
               "search_query_template": "Pakistani restaurants in {city}",
               "tags": {
@@ -9335,6 +9353,7 @@
             },
             {
               "name": "Sri Lankan",
+              "country": "Sri Lanka",
               "description": "Rice and curry, hoppers, kottu roti, seafood specialties",
               "search_query_template": "Sri Lankan restaurants in {city}",
               "tags": {
@@ -9391,6 +9410,7 @@
             },
             {
               "name": "Nepali",
+              "country": "Nepal",
               "description": "Momos, dal bhat, Himalayan comfort food",
               "search_query_template": "Nepali restaurants in {city}",
               "tags": {
@@ -9449,6 +9469,7 @@
           "subcategories": [
             {
               "name": "Lebanese",
+              "country": "Lebanon",
               "description": "Mezze, shawarma, tabbouleh, grilled meats",
               "search_query_template": "Lebanese restaurants in {city}",
               "tags": {
@@ -9511,6 +9532,7 @@
             },
             {
               "name": "Turkish",
+              "country": "Turkey",
               "description": "Kebabs, baklava, mezze, Ottoman-influenced cuisine",
               "search_query_template": "Turkish restaurants in {city}",
               "tags": {
@@ -9570,6 +9592,7 @@
             },
             {
               "name": "Persian/Iranian",
+              "country": "Iran",
               "description": "Kebab koobideh, tahdig, stews, saffron rice",
               "search_query_template": "Persian restaurants in {city}",
               "tags": {
@@ -9627,6 +9650,7 @@
             },
             {
               "name": "Israeli",
+              "country": "Israel",
               "description": "Hummus, falafel, shakshuka, modern Middle Eastern fusion",
               "search_query_template": "Israeli restaurants in {city}",
               "tags": {
@@ -9684,6 +9708,7 @@
             },
             {
               "name": "Emirati/Gulf",
+              "country": "United Arab Emirates",
               "description": "Al harees, machboos, camel dishes, Arabian hospitality",
               "search_query_template": "Emirati restaurants in {city}",
               "tags": {
@@ -9738,6 +9763,7 @@
             },
             {
               "name": "Syrian/Levantine",
+              "country": "Syria",
               "description": "Shawarma, fattoush, kibbeh, muhammara, Arabic sweets",
               "search_query_template": "Syrian restaurants in {city}",
               "tags": {
@@ -9792,6 +9818,7 @@
             },
             {
               "name": "Iraqi",
+              "country": "Iraq",
               "description": "Masgouf, kleicha, dolma, biryani, kubba",
               "search_query_template": "Iraqi restaurants in {city}",
               "tags": {
@@ -9846,6 +9873,7 @@
             },
             {
               "name": "Yemeni",
+              "country": "Yemen",
               "description": "Mandi, saltah, malawach, fahsa, Yemeni bread",
               "search_query_template": "Yemeni restaurants in {city}",
               "tags": {
@@ -9899,6 +9927,7 @@
             },
             {
               "name": "Jordanian",
+              "country": "Jordan",
               "description": "Mansaf, maqluba, zarb, falafel, kunafa",
               "search_query_template": "Jordanian restaurants in {city}",
               "tags": {
@@ -9959,6 +9988,7 @@
           "subcategories": [
             {
               "name": "French",
+              "country": "France",
               "description": "Classic haute cuisine, bistro fare, pastries, wine pairing",
               "search_query_template": "French restaurants in {city}",
               "tags": {
@@ -10020,6 +10050,7 @@
             },
             {
               "name": "Italian",
+              "country": "Italy",
               "description": "Pasta, pizza, risotto, regional specialties",
               "search_query_template": "Italian restaurants in {city}",
               "tags": {
@@ -10088,6 +10119,7 @@
             },
             {
               "name": "Spanish",
+              "country": "Spain",
               "description": "Tapas, paella, jamÃ³n, regional Spanish cuisine",
               "search_query_template": "Spanish restaurants in {city}",
               "tags": {
@@ -10145,6 +10177,7 @@
             },
             {
               "name": "Belgian",
+              "country": "Belgium",
               "description": "Mussels, waffles, frites, beer cuisine",
               "search_query_template": "Belgian restaurants in {city}",
               "tags": {
@@ -10202,6 +10235,7 @@
           "subcategories": [
             {
               "name": "Greek",
+              "country": "Greece",
               "description": "Souvlaki, moussaka, mezze, Mediterranean flavors",
               "search_query_template": "Greek restaurants in {city}",
               "tags": {
@@ -10261,6 +10295,7 @@
             },
             {
               "name": "Portuguese",
+              "country": "Portugal",
               "description": "Bacalhau, pastÃ©is de nata, grilled sardines, port wine",
               "search_query_template": "Portuguese restaurants in {city}",
               "tags": {
@@ -10380,6 +10415,7 @@
           "subcategories": [
             {
               "name": "German",
+              "country": "Germany",
               "description": "Sausages, schnitzel, pretzels, beer hall cuisine",
               "search_query_template": "German restaurants in {city}",
               "tags": {
@@ -10435,6 +10471,7 @@
             },
             {
               "name": "Austrian",
+              "country": "Austria",
               "description": "Wiener schnitzel, strudel, Viennese cafÃ© culture",
               "search_query_template": "Austrian restaurants in {city}",
               "tags": {
@@ -10549,6 +10586,7 @@
             },
             {
               "name": "Swiss",
+              "country": "Switzerland",
               "description": "Fondue, raclette, rÃ¶sti, Alpine cuisine",
               "search_query_template": "Swiss restaurants in {city}",
               "tags": {
@@ -10612,6 +10650,7 @@
           "subcategories": [
             {
               "name": "Russian",
+              "country": "Russia",
               "description": "Borscht, pelmeni, blini, caviar, vodka culture",
               "search_query_template": "Russian restaurants in {city}",
               "tags": {
@@ -10665,6 +10704,7 @@
             },
             {
               "name": "Polish",
+              "country": "Poland",
               "description": "Pierogi, bigos, kielbasa, hearty Eastern European fare",
               "search_query_template": "Polish restaurants in {city}",
               "tags": {
@@ -10717,6 +10757,7 @@
             },
             {
               "name": "Czech",
+              "country": "Czech Republic",
               "description": "Goulash, svÃ­ÄkovÃ¡, dumplings, beer hall culture",
               "search_query_template": "Czech restaurants in {city}",
               "tags": {
@@ -10768,6 +10809,7 @@
             },
             {
               "name": "Hungarian",
+              "country": "Hungary",
               "description": "Goulash, paprikash, lÃ¡ngos, chicken paprikash, chimney cake",
               "search_query_template": "Hungarian restaurants in {city}",
               "tags": {
@@ -10825,6 +10867,7 @@
             },
             {
               "name": "Ukrainian",
+              "country": "Ukraine",
               "description": "Borscht, varenyky, chicken Kyiv, holubtsi, salo",
               "search_query_template": "Ukrainian restaurants in {city}",
               "tags": {
@@ -10883,6 +10926,7 @@
             },
             {
               "name": "Romanian",
+              "country": "Romania",
               "description": "MÄƒmÄƒligÄƒ, sarmale, mici, ciorbÄƒ, cozonac",
               "search_query_template": "Romanian restaurants in {city}",
               "tags": {
@@ -10940,6 +10984,7 @@
             },
             {
               "name": "Bulgarian",
+              "country": "Bulgaria",
               "description": "Shopska salad, banitsa, kebapche, tarator, kavarma",
               "search_query_template": "Bulgarian restaurants in {city}",
               "tags": {
@@ -11003,6 +11048,7 @@
           "subcategories": [
             {
               "name": "Georgian",
+              "country": "Georgia",
               "description": "Khachapuri, khinkali, mtsvadi, churchkhela, wine culture",
               "search_query_template": "Georgian restaurants in {city}",
               "tags": {
@@ -11065,6 +11111,7 @@
             },
             {
               "name": "Armenian",
+              "country": "Armenia",
               "description": "Khorovats, dolma, lavash, lahmajun, ancient wine traditions",
               "search_query_template": "Armenian restaurants in {city}",
               "tags": {
@@ -11128,6 +11175,7 @@
             },
             {
               "name": "Azerbaijani",
+              "country": "Azerbaijan",
               "description": "Plov, dolma, kebabs, piti, qutab, tea culture",
               "search_query_template": "Azerbaijani restaurants in {city}",
               "tags": {
@@ -11194,6 +11242,7 @@
           "subcategories": [
             {
               "name": "Serbian",
+              "country": "Serbia",
               "description": "Ä†evapi, pljeskavica, ajvar, karaÄ‘orÄ‘eva Å¡nicla, rakija",
               "search_query_template": "Serbian restaurants in {city}",
               "tags": {
@@ -11251,6 +11300,7 @@
             },
             {
               "name": "Croatian",
+              "country": "Croatia",
               "description": "PaÅ¡ticada, Å¡trukli, buzara, crni riÅ¾ot, peka",
               "search_query_template": "Croatian restaurants in {city}",
               "tags": {
@@ -11311,6 +11361,7 @@
             },
             {
               "name": "Bosnian",
+              "country": "Bosnia and Herzegovina",
               "description": "Ä†evapi, burek, bosanski lonac, dolma, baklava",
               "search_query_template": "Bosnian restaurants in {city}",
               "tags": {
@@ -11374,6 +11425,7 @@
           "subcategories": [
             {
               "name": "Lithuanian",
+              "country": "Lithuania",
               "description": "Cepelinai, Å¡altibarÅ¡Äiai, kibinai, skilandis",
               "search_query_template": "Lithuanian restaurants in {city}",
               "tags": {
@@ -11431,6 +11483,7 @@
             },
             {
               "name": "Latvian",
+              "country": "Latvia",
               "description": "Piragi, grey peas with bacon, sklandrausis, rupjmaize",
               "search_query_template": "Latvian restaurants in {city}",
               "tags": {
@@ -11489,6 +11542,7 @@
             },
             {
               "name": "Estonian",
+              "country": "Estonia",
               "description": "KiluvÃµileib, kama, verivorst, mulgipuder",
               "search_query_template": "Estonian restaurants in {city}",
               "tags": {
@@ -11552,6 +11606,7 @@
           "subcategories": [
             {
               "name": "British",
+              "country": "United Kingdom",
               "description": "Fish and chips, roast dinner, shepherd's pie, full English breakfast",
               "search_query_template": "British restaurants in {city}",
               "tags": {
@@ -11611,6 +11666,7 @@
             },
             {
               "name": "Irish",
+              "country": "Ireland",
               "description": "Irish stew, colcannon, soda bread, boxty, Guinness dishes",
               "search_query_template": "Irish restaurants in {city}",
               "tags": {
@@ -11669,6 +11725,7 @@
             },
             {
               "name": "Scottish",
+              "country": "United Kingdom",
               "description": "Haggis, cullen skink, shortbread, scotch broth, whisky pairing",
               "search_query_template": "Scottish restaurants in {city}",
               "tags": {
@@ -11733,6 +11790,7 @@
           "subcategories": [
             {
               "name": "Dutch",
+              "country": "Netherlands",
               "description": "Bitterballen, stamppot, stroopwafels, haring, poffertjes",
               "search_query_template": "Dutch restaurants in {city}",
               "tags": {
@@ -11795,6 +11853,7 @@
           "subcategories": [
             {
               "name": "Uzbek",
+              "country": "Uzbekistan",
               "description": "Plov, samsa, lagman, shashlik, manti",
               "search_query_template": "Uzbek restaurants in {city}",
               "tags": {
@@ -11854,6 +11913,7 @@
             },
             {
               "name": "Kazakh",
+              "country": "Kazakhstan",
               "description": "Beshbarmak, kazy, kumis, baursak, kuyrdak",
               "search_query_template": "Kazakh restaurants in {city}",
               "tags": {
@@ -11917,6 +11977,7 @@
           "subcategories": [
             {
               "name": "Moroccan",
+              "country": "Morocco",
               "description": "Tagine, couscous, pastilla, mint tea rituals",
               "search_query_template": "Moroccan restaurants in {city}",
               "tags": {
@@ -11980,6 +12041,7 @@
             },
             {
               "name": "Egyptian",
+              "country": "Egypt",
               "description": "Koshari, ful medames, kofta, Nile River specialties",
               "search_query_template": "Egyptian restaurants in {city}",
               "tags": {
@@ -12038,6 +12100,7 @@
             },
             {
               "name": "Tunisian",
+              "country": "Tunisia",
               "description": "Couscous, brik, harissa dishes, lablabi, makroudh",
               "search_query_template": "Tunisian restaurants in {city}",
               "tags": {
@@ -12098,6 +12161,7 @@
             },
             {
               "name": "Algerian",
+              "country": "Algeria",
               "description": "Couscous, bourek, chakchouka, merguez, mint tea",
               "search_query_template": "Algerian restaurants in {city}",
               "tags": {
@@ -12162,6 +12226,7 @@
           "subcategories": [
             {
               "name": "Ethiopian",
+              "country": "Ethiopia",
               "description": "Injera, doro wat, communal eating traditions",
               "search_query_template": "Ethiopian restaurants in {city}",
               "tags": {
@@ -12222,6 +12287,7 @@
             },
             {
               "name": "Nigerian",
+              "country": "Nigeria",
               "description": "Jollof rice, suya, egusi soup, West African flavors",
               "search_query_template": "Nigerian restaurants in {city}",
               "tags": {
@@ -12280,6 +12346,7 @@
             },
             {
               "name": "South African",
+              "country": "South Africa",
               "description": "Braai, bobotie, bunny chow, Cape Malay influence",
               "search_query_template": "South African restaurants in {city}",
               "tags": {
@@ -12337,6 +12404,7 @@
             },
             {
               "name": "Senegalese",
+              "country": "Senegal",
               "description": "Thieboudienne, yassa, mafe, pastels, bissap",
               "search_query_template": "Senegalese restaurants in {city}",
               "tags": {
@@ -12397,6 +12465,7 @@
             },
             {
               "name": "Ghanaian",
+              "country": "Ghana",
               "description": "Jollof rice, banku, fufu, kelewele, waakye",
               "search_query_template": "Ghanaian restaurants in {city}",
               "tags": {
@@ -12457,6 +12526,7 @@
             },
             {
               "name": "Kenyan",
+              "country": "Kenya",
               "description": "Nyama choma, ugali, pilau, sukuma wiki, mandazi",
               "search_query_template": "Kenyan restaurants in {city}",
               "tags": {
@@ -12686,6 +12756,7 @@
             },
             {
               "name": "Canadian",
+              "country": "Canada",
               "description": "Poutine, tourtiÃ¨re, Montreal smoked meat",
               "search_query_template": "Canadian restaurants in {city}",
               "tags": {
@@ -12741,6 +12812,7 @@
           "subcategories": [
             {
               "name": "Mexican - Traditional",
+              "country": "Mexico",
               "description": "Tacos, mole, pozole, authentic regional Mexican",
               "search_query_template": "authentic Mexican restaurants in {city}",
               "tags": {
@@ -12858,6 +12930,7 @@
             },
             {
               "name": "Guatemalan",
+              "country": "Guatemala",
               "description": "PepiÃ¡n, kak'ik, tamales, Mayan-influenced cuisine",
               "search_query_template": "Guatemalan restaurants in {city}",
               "tags": {
@@ -12910,6 +12983,7 @@
             },
             {
               "name": "Salvadoran",
+              "country": "El Salvador",
               "description": "Pupusas, yuca frita, curtido, tamales de elote",
               "search_query_template": "Salvadoran restaurants in {city}",
               "tags": {
@@ -12964,6 +13038,7 @@
             },
             {
               "name": "Honduran",
+              "country": "Honduras",
               "description": "Baleadas, carne asada, sopa de caracol, plato tÃ­pico",
               "search_query_template": "Honduran restaurants in {city}",
               "tags": {
@@ -13018,6 +13093,7 @@
             },
             {
               "name": "Nicaraguan",
+              "country": "Nicaragua",
               "description": "Gallo pinto, nacatamal, vigorÃ³n, quesillo",
               "search_query_template": "Nicaraguan restaurants in {city}",
               "tags": {
@@ -13076,6 +13152,7 @@
           "subcategories": [
             {
               "name": "Cuban",
+              "country": "Cuba",
               "description": "Ropa vieja, moros y cristianos, Cuban sandwiches",
               "search_query_template": "Cuban restaurants in {city}",
               "tags": {
@@ -13131,6 +13208,7 @@
             },
             {
               "name": "Jamaican",
+              "country": "Jamaica",
               "description": "Jerk chicken, ackee and saltfish, patties, rum culture",
               "search_query_template": "Jamaican restaurants in {city}",
               "tags": {
@@ -13187,6 +13265,7 @@
             },
             {
               "name": "Puerto Rican",
+              "country": "Puerto Rico",
               "description": "Mofongo, arroz con gandules, pernil, Latin Caribbean fusion",
               "search_query_template": "Puerto Rican restaurants in {city}",
               "tags": {
@@ -13247,6 +13326,7 @@
           "subcategories": [
             {
               "name": "Peruvian",
+              "country": "Peru",
               "description": "Ceviche, lomo saltado, anticuchos, Nikkei fusion",
               "search_query_template": "Peruvian restaurants in {city}",
               "tags": {
@@ -13307,6 +13387,7 @@
             },
             {
               "name": "Brazilian",
+              "country": "Brazil",
               "description": "Churrasco, feijoada, aÃ§aÃ­, Brazilian BBQ",
               "search_query_template": "Brazilian restaurants in {city}",
               "tags": {
@@ -13361,6 +13442,7 @@
             },
             {
               "name": "Argentine",
+              "country": "Argentina",
               "description": "Asado, empanadas, milanesa, Malbec wine culture",
               "search_query_template": "Argentine restaurants in {city}",
               "tags": {
@@ -13418,6 +13500,7 @@
             },
             {
               "name": "Colombian",
+              "country": "Colombia",
               "description": "Bandeja paisa, arepas, ajiaco, coastal and mountain cuisine",
               "search_query_template": "Colombian restaurants in {city}",
               "tags": {
@@ -13472,6 +13555,7 @@
             },
             {
               "name": "Venezuelan",
+              "country": "Venezuela",
               "description": "Arepas, pabellÃ³n criollo, cachapas, tequeÃ±os, hallacas",
               "search_query_template": "Venezuelan restaurants in {city}",
               "tags": {
@@ -13527,6 +13611,7 @@
             },
             {
               "name": "Chilean",
+              "country": "Chile",
               "description": "Pastel de choclo, empanadas, curanto, caldillo, pisco",
               "search_query_template": "Chilean restaurants in {city}",
               "tags": {
@@ -13582,6 +13667,7 @@
             },
             {
               "name": "Ecuadorian",
+              "country": "Ecuador",
               "description": "Ceviche, encebollado, locro de papa, llapingachos",
               "search_query_template": "Ecuadorian restaurants in {city}",
               "tags": {
@@ -13638,6 +13724,7 @@
             },
             {
               "name": "Bolivian",
+              "country": "Bolivia",
               "description": "SalteÃ±as, silpancho, pique macho, quinoa dishes",
               "search_query_template": "Bolivian restaurants in {city}",
               "tags": {
@@ -13697,6 +13784,7 @@
           "subcategories": [
             {
               "name": "Modern Australian",
+              "country": "Australia",
               "description": "Bush tucker, seafood, multicultural fusion, cafÃ© culture",
               "search_query_template": "Modern Australian restaurants in {city}",
               "tags": {

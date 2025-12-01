@@ -419,10 +419,17 @@ def check_hard_filters(category: Dict, user_input: Dict, city_tags: Dict,
 
 
 def calculate_relevance_score(category: Dict, user_input: Dict, city_tags: Dict,
-                              date_context: Dict) -> int:
+                              date_context: Dict, destination_country: str = "") -> int:
     """
     Calculate relevance score for a category (0-100).
     Higher score = more relevant to the user's trip.
+
+    Args:
+        category: Category dictionary with tags and metadata
+        user_input: User input dictionary with trip_type, budget, etc.
+        city_tags: City tag dictionary with geo_region, tourism_characteristics, etc.
+        date_context: Date context with season, special_periods, etc.
+        destination_country: The country of the destination city (for cuisine matching)
     """
     score = 0
     cat_tags = category.get('tags', {})
@@ -493,6 +500,15 @@ def calculate_relevance_score(category: Dict, user_input: Dict, city_tags: Dict,
                 # Reverse check - city is neighbor of cuisine's home
                 score += 12
 
+    # 9. COUNTRY-CUISINE EXACT MATCH BONUS (for dining categories)
+    # This gives highest score to cuisines that exactly match the destination country
+    # e.g., Armenian cuisine when visiting Armenia
+    cuisine_country = category.get('country')
+    if cuisine_country and destination_country:
+        if cuisine_country.lower() == destination_country.lower():
+            # Perfect country match - add significant bonus
+            score += 100
+
     return min(score, 100)  # Cap at 100
 
 
@@ -549,7 +565,7 @@ def filter_categories(all_categories: List[Dict], city: str, country: str,
             continue
         
         # Calculate relevance score
-        score = calculate_relevance_score(category, user_input, city_tags, date_context)
+        score = calculate_relevance_score(category, user_input, city_tags, date_context, country)
         
         # Add to results
         result_item = {
